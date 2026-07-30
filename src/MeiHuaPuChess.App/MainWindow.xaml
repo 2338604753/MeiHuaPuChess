@@ -361,24 +361,34 @@
         <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Padding="0,16,20,20">
             <StackPanel>
 
-                <!-- ===== 主题切换 ===== -->
+                <!-- ===== 主题 + 更新 ===== -->
                 <Border Style="{StaticResource CardStyle}" Padding="10" Margin="0,0,0,10">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock Text="主题" VerticalAlignment="Center" FontSize="12"
-                                   Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,10,0"/>
-                        <Button x:Name="ThemeIndigo" Width="28" Height="28" Cursor="Hand"
-                                ToolTip="靛蓝茉莉" Click="OnThemeClick" Tag="IndigoJasmine"
-                                Style="{StaticResource IndigoButton}" Padding="0"
-                                Background="#4F46E5" Margin="0,0,6,0"/>
-                        <Button x:Name="ThemeBamboo" Width="28" Height="28" Cursor="Hand"
-                                ToolTip="竹青翠微" Click="OnThemeClick" Tag="BambooGreen"
-                                Style="{StaticResource IndigoButton}" Padding="0"
-                                Background="#15803D" Margin="0,0,6,0"/>
-                        <Button x:Name="ThemeCinnabar" Width="28" Height="28" Cursor="Hand"
-                                ToolTip="朱砂暖煦" Click="OnThemeClick" Tag="CinnabarWarm"
-                                Style="{StaticResource IndigoButton}" Padding="0"
-                                Background="#C2410C"/>
-                    </StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <TextBlock Text="主题" VerticalAlignment="Center" FontSize="12"
+                                       Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,8,0"/>
+                            <Button x:Name="ThemeIndigo" Width="26" Height="26" Cursor="Hand"
+                                    ToolTip="靛蓝茉莉" Click="OnThemeClick" Tag="IndigoJasmine"
+                                    Style="{StaticResource IndigoButton}" Padding="0"
+                                    Background="#4F46E5" Margin="0,0,5,0"/>
+                            <Button x:Name="ThemeBamboo" Width="26" Height="26" Cursor="Hand"
+                                    ToolTip="竹青翠微" Click="OnThemeClick" Tag="BambooGreen"
+                                    Style="{StaticResource IndigoButton}" Padding="0"
+                                    Background="#15803D" Margin="0,0,5,0"/>
+                            <Button x:Name="ThemeCinnabar" Width="26" Height="26" Cursor="Hand"
+                                    ToolTip="朱砂暖煦" Click="OnThemeClick" Tag="CinnabarWarm"
+                                    Style="{StaticResource IndigoButton}" Padding="0"
+                                    Background="#C2410C"/>
+                        </StackPanel>
+                        <Button Grid.Column="1" Content="检查更新" FontSize="11"
+                                Foreground="{DynamicResource TextSecondaryBrush}"
+                                Background="Transparent" BorderThickness="0" Cursor="Hand"
+                                VerticalAlignment="Center" Click="OnCheckUpdateClick"/>
+                    </Grid>
                 </Border>
 
                 <!-- ========== 模式选择 ========== -->

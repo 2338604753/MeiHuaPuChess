@@ -70,4 +70,13 @@ public partial class MainWindow : Window
             Source = new Uri($"Themes/{theme}.xaml", UriKind.Relative)
         });
     }
+
+    private async void OnCheckUpdateClick(object sender, RoutedEventArgs e)
+    {
+        var updateService = new Services.UpdateService();
+        var dlg = new Views.UpdateDialog { Owner = this };
+        dlg.Show();
+        var result = await updateService.CheckAsync();
+        dlg.ShowResult(result);
+    }
 }
