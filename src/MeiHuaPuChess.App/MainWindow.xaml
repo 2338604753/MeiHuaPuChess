@@ -444,7 +444,7 @@
                                    TextWrapping="Wrap" Margin="0,10,0,0"
                                    MaxHeight="48" TextTrimming="CharacterEllipsis"/>
 
-                        <Button Margin="0,14,0,0" Style="{StaticResource EmeraldButton}"
+                        <Button Margin="0,14,0,0" Style="{StaticResource IndigoButton}"
                                 Command="{Binding StartReviewCommand}"
                                 Visibility="{Binding IsReviewMode, Converter={StaticResource BoolToVis}}">
                             <StackPanel Orientation="Horizontal">

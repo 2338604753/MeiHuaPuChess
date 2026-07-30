@@ -1,104 +1,191 @@
 <Window x:Class="MeiHuaPuChess.App.Views.UpdateDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="检查更新" Width="420" Height="340"
+        Width="440" Height="380"
         WindowStartupLocation="CenterOwner"
         WindowStyle="None"
-        Background="White" ResizeMode="NoResize"
+        Background="Transparent" ResizeMode="NoResize"
         ShowInTaskbar="False">
 
-    <Border Background="White" CornerRadius="12" BorderBrush="#E7E5E4" BorderThickness="1">
+    <Border CornerRadius="16" Background="White">
         <Border.Effect>
-            <DropShadowEffect BlurRadius="20" ShadowDepth="4" Opacity="0.2"/>
+            <DropShadowEffect BlurRadius="30" ShadowDepth="6" Opacity="0.25" Color="#000000"/>
         </Border.Effect>
-        <Grid Margin="24">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!-- 标题栏 -->
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,16">
-                <TextBlock x:Name="TitleText" FontSize="18" FontWeight="Bold"
-                           Foreground="#1C1917" VerticalAlignment="Center"/>
-                <Button Content="✕" Background="Transparent" BorderThickness="0"
-                        Foreground="#A8A29E" FontSize="16" Cursor="Hand"
-                        HorizontalAlignment="Right" Click="OnCloseClick"
-                        Width="32" Height="32" Margin="8,0,0,0"/>
-            </StackPanel>
+            <!-- ===== 顶部色条 + 标题 ===== -->
+            <Border Grid.Row="0" CornerRadius="16,16,0,0" Height="56"
+                    Background="#4F46E5">
+                <Grid Margin="20,0">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- 图标 -->
+                        <Border Width="32" Height="32" CornerRadius="16"
+                                Background="#FFFFFF" Opacity="0.2">
+                            <TextBlock Text="↑" FontSize="18" FontWeight="Bold"
+                                       Foreground="White" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" Margin="0,-2,0,0"/>
+                        </Border>
+                        <TextBlock x:Name="TitleText" Text="检查更新"
+                                   FontSize="17" FontWeight="SemiBold"
+                                   Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <Button Content="✕" Background="Transparent" BorderThickness="0"
+                            Foreground="#FFFFFF" FontSize="15" Cursor="Hand" Opacity="0.7"
+                            HorizontalAlignment="Right" VerticalAlignment="Center"
+                            Click="OnCloseClick" Width="28" Height="28"/>
+                </Grid>
+            </Border>
 
-            <!-- 内容区 -->
-            <StackPanel Grid.Row="1">
-                <!-- 已是最新 -->
-                <StackPanel x:Name="LatestPanel" Visibility="Collapsed">
-                    <TextBlock Text="✅" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,12"/>
-                    <TextBlock Text="已是最新版本" FontSize="16" FontWeight="SemiBold"
-                               HorizontalAlignment="Center" Foreground="#059669"/>
-                    <TextBlock x:Name="CurrentVersionLabel" FontSize="13"
-                               HorizontalAlignment="Center" Foreground="#78716C" Margin="0,6,0,0"/>
+            <!-- ===== 内容区 ===== -->
+            <Grid Grid.Row="1" Margin="24,20,24,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- ===== 检查中 ===== -->
+                <StackPanel x:Name="LoadingPanel" Grid.Row="0">
+                    <TextBlock Text="正在检查更新…" FontSize="15" FontWeight="SemiBold"
+                               Foreground="#1C1917" HorizontalAlignment="Center" Margin="0,24,0,0"/>
+                    <TextBlock Text="连接 GitHub 获取最新版本"
+                               FontSize="13" Foreground="#78716C"
+                               HorizontalAlignment="Center" Margin="0,6,0,0"/>
                 </StackPanel>
 
-                <!-- 发现新版本 -->
-                <StackPanel x:Name="UpdatePanel" Visibility="Collapsed">
-                    <TextBlock Text="🎉" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,12"/>
-                    <TextBlock Text="发现新版本！" FontSize="16" FontWeight="SemiBold"
-                               HorizontalAlignment="Center" Foreground="#D97706"/>
-                    <Border Background="#FFFBEB" CornerRadius="8" Padding="12" Margin="0,10,0,0">
-                        <StackPanel>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                <TextBlock x:Name="OldVersionLabel" FontSize="13"
-                                           Foreground="#78716C" TextDecorations="Strikethrough"/>
-                                <TextBlock Text=" → " FontSize="13" Foreground="#A8A29E" Margin="4,0"/>
-                                <TextBlock x:Name="NewVersionLabel" FontSize="14" FontWeight="Bold"
-                                           Foreground="#D97706"/>
-                            </StackPanel>
-                            <TextBlock x:Name="ReleaseNameLabel" FontSize="13"
-                                       HorizontalAlignment="Center" Foreground="#1C1917"
-                                       FontWeight="SemiBold" Margin="0,6,0,0" TextWrapping="Wrap"/>
-                        </StackPanel>
+                <!-- ===== 已是最新 ===== -->
+                <StackPanel x:Name="LatestPanel" Grid.Row="0" Visibility="Collapsed">
+                    <Border Width="56" Height="56" CornerRadius="28"
+                            Background="#ECFDF5" HorizontalAlignment="Center" Margin="0,8,0,0">
+                        <TextBlock Text="✓" FontSize="28" FontWeight="Bold"
+                                   Foreground="#059669" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="已是最新版本" FontSize="17" FontWeight="SemiBold"
+                               HorizontalAlignment="Center" Foreground="#059669" Margin="0,12,0,0"/>
+                    <Border Background="#F5F5F4" CornerRadius="10" Padding="14,10"
+                            HorizontalAlignment="Center" Margin="0,12,0,0">
+                        <TextBlock x:Name="LatestVersionLabel" FontSize="14" FontWeight="SemiBold"
+                                   Foreground="#1C1917" HorizontalAlignment="Center"/>
                     </Border>
                 </StackPanel>
 
-                <!-- 错误 -->
-                <StackPanel x:Name="ErrorPanel" Visibility="Collapsed">
-                    <TextBlock Text="⚠" FontSize="36" HorizontalAlignment="Center" Margin="0,0,0,12"/>
-                    <TextBlock x:Name="ErrorText" FontSize="14"
-                               HorizontalAlignment="Center" Foreground="#DC2626"
-                               TextWrapping="Wrap"/>
-                </StackPanel>
-            </StackPanel>
+                <!-- ===== 发现新版本 ===== -->
+                <StackPanel x:Name="UpdatePanel" Grid.Row="0" Visibility="Collapsed">
+                    <TextBlock Text="发现新版本" FontSize="17" FontWeight="SemiBold"
+                               HorizontalAlignment="Center" Foreground="#4F46E5" Margin="0,8,0,0"/>
 
-            <!-- 操作按钮 -->
-            <StackPanel Grid.Row="2" Orientation="Horizontal"
-                        HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button x:Name="DownloadBtn" Content="下载更新" Width="120" Height="38"
-                        FontSize="14" FontWeight="SemiBold" Cursor="Hand"
-                        Foreground="White" Background="#D97706"
-                        Visibility="Collapsed" Click="OnDownloadClick">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}"
-                                    CornerRadius="8" Padding="16,0">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <!-- 版本对比卡片 -->
+                    <Border Background="#F5F5F4" CornerRadius="12" Padding="16" Margin="0,14,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- 当前版本 -->
+                            <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                                <TextBlock Text="当前版本" FontSize="12" Foreground="#78716C"
+                                           HorizontalAlignment="Center"/>
+                                <Border Background="White" CornerRadius="8" Padding="12,8"
+                                        Margin="0,6,0,0">
+                                    <TextBlock x:Name="OldVersionLabel" FontSize="15" FontWeight="Bold"
+                                               Foreground="#78716C" HorizontalAlignment="Center"/>
+                                </Border>
+                            </StackPanel>
+
+                            <!-- 箭头 -->
+                            <Border Grid.Column="1" Width="32" Height="32" CornerRadius="16"
+                                    Background="#4F46E5" Margin="8,0" VerticalAlignment="Center">
+                                <TextBlock Text="→" FontSize="16" FontWeight="Bold"
+                                           Foreground="White" HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
                             </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <Button Content="关闭" Width="80" Height="38"
-                        FontSize="14" Cursor="Hand"
-                        Foreground="#78716C" Background="#F5F5F4"
-                        Margin="8,0,0,0" Click="OnCloseClick">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}"
-                                    CornerRadius="8" Padding="12,0">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </StackPanel>
+
+                            <!-- 最新版本 -->
+                            <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                                <TextBlock Text="最新版本" FontSize="12" Foreground="#78716C"
+                                           HorizontalAlignment="Center"/>
+                                <Border Background="#EEF2FF" CornerRadius="8" Padding="12,8"
+                                        Margin="0,6,0,0"
+                                        BorderBrush="#A5B4FC" BorderThickness="1.5">
+                                    <TextBlock x:Name="NewVersionLabel" FontSize="15" FontWeight="Bold"
+                                               Foreground="#4338CA" HorizontalAlignment="Center"/>
+                                </Border>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+
+                    <!-- 版本说明 -->
+                    <TextBlock x:Name="ReleaseNoteLabel" FontSize="13"
+                               Foreground="#78716C" HorizontalAlignment="Center"
+                               TextWrapping="Wrap" TextTrimming="CharacterEllipsis"
+                               MaxHeight="36" Margin="0,10,0,0"/>
+                </StackPanel>
+
+                <!-- ===== 错误 ===== -->
+                <StackPanel x:Name="ErrorPanel" Grid.Row="0" Visibility="Collapsed">
+                    <Border Width="56" Height="56" CornerRadius="28"
+                            Background="#FEF2F2" HorizontalAlignment="Center" Margin="0,8,0,0">
+                        <TextBlock Text="!" FontSize="28" FontWeight="Bold"
+                                   Foreground="#DC2626" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock x:Name="ErrorText" FontSize="15" FontWeight="SemiBold"
+                               HorizontalAlignment="Center" Foreground="#DC2626"
+                               TextWrapping="Wrap" Margin="0,12,0,0"/>
+                    <TextBlock Text="请检查网络连接后重试" FontSize="13"
+                               Foreground="#78716C" HorizontalAlignment="Center" Margin="0,6,0,0"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- ===== 底部按钮 ===== -->
+            <Border Grid.Row="2" Background="#FAFAF9" CornerRadius="0,0,16,16"
+                    Padding="20,16" Margin="0,16,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="CloseBtn" Content="知道了" Width="90" Height="38"
+                            FontSize="14" FontWeight="SemiBold" Cursor="Hand"
+                            Foreground="#78716C" Background="#F0F0F0"
+                            Click="OnCloseClick" Margin="0,0,8,0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                        CornerRadius="8" Padding="12,0">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="bd" Property="Background" Value="#E5E5E5"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="DownloadBtn" Content="前往下载" Width="110" Height="38"
+                            FontSize="14" FontWeight="SemiBold" Cursor="Hand"
+                            Foreground="White" Background="#4F46E5"
+                            Visibility="Collapsed" Click="OnDownloadClick">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                        CornerRadius="8" Padding="12,0">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="bd" Property="Background" Value="#4338CA"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Border>
         </Grid>
     </Border>
 </Window>

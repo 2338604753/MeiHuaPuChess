@@ -73,10 +73,10 @@ public partial class MainWindow : Window
 
     private async void OnCheckUpdateClick(object sender, RoutedEventArgs e)
     {
-        var updateService = new Services.UpdateService();
         var dlg = new Views.UpdateDialog { Owner = this };
         dlg.Show();
-        var result = await updateService.CheckAsync();
+        var service = new Services.UpdateService();
+        var result = await service.CheckAsync();
         dlg.ShowResult(result);
     }
 }

@@ -51,12 +51,28 @@ public class UpdateService
                 DownloadUrl = release.HtmlUrl
             };
         }
-        catch (Exception ex)
+        catch (HttpRequestException)
         {
             return new UpdateCheckResult
             {
                 IsLatest = true,
-                Error = $"检查更新失败：{ex.Message}"
+                Error = "网络连接失败，请检查网络后重试"
+            };
+        }
+        catch (TaskCanceledException)
+        {
+            return new UpdateCheckResult
+            {
+                IsLatest = true,
+                Error = "请求超时，请稍后重试"
+            };
+        }
+        catch (Exception)
+        {
+            return new UpdateCheckResult
+            {
+                IsLatest = true,
+                Error = "检查更新失败，请稍后重试"
             };
         }
     }
