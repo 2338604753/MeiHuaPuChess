@@ -151,11 +151,6 @@
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter TargetName="bg" Property="Background" Value="White"/>
                                 <Setter Property="Foreground" Value="{StaticResource PrimaryColor}"/>
-                                <Setter TargetName="bg">
-                                    <Setter.Value>
-                                        <DropShadowEffect BlurRadius="4" ShadowDepth="1" Opacity="0.1"/>
-                                    </Setter.Value>
-                                </Setter>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="bg" Property="Background" Value="#F5F5F4"/>
