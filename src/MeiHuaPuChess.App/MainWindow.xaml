@@ -60,7 +60,8 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
 
-        <Style x:Key="BaseButton" TargetType="Button">
+        <!-- 各色按钮（独立定义，不用 BasedOn 以确保 DynamicResource 实时更新） -->
+        <Style x:Key="IndigoButton" TargetType="Button">
             <Setter Property="Height" Value="40"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
@@ -68,24 +69,57 @@
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Padding" Value="20,0"/>
             <Setter Property="Template" Value="{StaticResource BtnTemplate}"/>
-        </Style>
-
-        <Style x:Key="IndigoButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
             <Setter Property="Background" Value="{DynamicResource IndigoBrush}"/>
         </Style>
-        <Style x:Key="EmeraldButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Style x:Key="EmeraldButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="20,0"/>
+            <Setter Property="Template" Value="{StaticResource BtnTemplate}"/>
             <Setter Property="Background" Value="{DynamicResource EmeraldBrush}"/>
         </Style>
-        <Style x:Key="RoseButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Style x:Key="RoseButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="20,0"/>
+            <Setter Property="Template" Value="{StaticResource BtnTemplate}"/>
             <Setter Property="Background" Value="{DynamicResource RoseBrush}"/>
         </Style>
-        <Style x:Key="AmberButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Style x:Key="AmberButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="20,0"/>
+            <Setter Property="Template" Value="{StaticResource BtnTemplate}"/>
             <Setter Property="Background" Value="{DynamicResource AmberBrush}"/>
         </Style>
-        <Style x:Key="SkyButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Style x:Key="SkyButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="20,0"/>
+            <Setter Property="Template" Value="{StaticResource BtnTemplate}"/>
             <Setter Property="Background" Value="{DynamicResource SkyBrush}"/>
         </Style>
-        <Style x:Key="SlateButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Style x:Key="SlateButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="16,0"/>
+            <Setter Property="Margin" Value="0,0,0,6"/>
+            <Setter Property="Template" Value="{StaticResource BtnTemplate}"/>
             <Setter Property="Background" Value="#78716C"/>
         </Style>
 
@@ -334,15 +368,15 @@
                                    Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,10,0"/>
                         <Button x:Name="ThemeIndigo" Width="28" Height="28" Cursor="Hand"
                                 ToolTip="靛蓝茉莉" Click="OnThemeClick" Tag="IndigoJasmine"
-                                Style="{StaticResource BaseButton}" Padding="0"
+                                Style="{StaticResource IndigoButton}" Padding="0"
                                 Background="#4F46E5" Margin="0,0,6,0"/>
                         <Button x:Name="ThemeBamboo" Width="28" Height="28" Cursor="Hand"
                                 ToolTip="竹青翠微" Click="OnThemeClick" Tag="BambooGreen"
-                                Style="{StaticResource BaseButton}" Padding="0"
+                                Style="{StaticResource IndigoButton}" Padding="0"
                                 Background="#15803D" Margin="0,0,6,0"/>
                         <Button x:Name="ThemeCinnabar" Width="28" Height="28" Cursor="Hand"
                                 ToolTip="朱砂暖煦" Click="OnThemeClick" Tag="CinnabarWarm"
-                                Style="{StaticResource BaseButton}" Padding="0"
+                                Style="{StaticResource IndigoButton}" Padding="0"
                                 Background="#C2410C"/>
                     </StackPanel>
                 </Border>
