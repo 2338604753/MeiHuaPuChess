@@ -53,9 +53,9 @@ public partial class MainWindow : Window
         {
             _viewModel.LoadRecords();
             // 默认选择第一局（不自动开始）
-            if (_viewModel.Records.Count > 0)
+            if (_viewModel.MeiHuaPuRecords.Count > 0)
             {
-                _viewModel.SelectedRecord = _viewModel.Records[0];
+                _viewModel.SelectedRecord = _viewModel.MeiHuaPuRecords[0];
             }
         };
     }

@@ -422,22 +422,174 @@
                 </StackPanel>
                 <Border Style="{StaticResource CardStyle}">
                     <StackPanel>
-                        <ComboBox ItemsSource="{Binding Records}"
-                                  SelectedItem="{Binding SelectedRecord}"
-                                  Style="{StaticResource ModernComboBox}">
-                            <ComboBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Border Background="#ECFDF5" CornerRadius="4" Padding="6,2" Margin="0,0,10,0">
-                                            <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="12"
-                                                       Foreground="{DynamicResource EmeraldBrush}"/>
+                        <!-- 来源切换 -->
+                        <UniformGrid Columns="2" Rows="1" Margin="0,0,0,10">
+                            <Button Content="梅花谱" Height="32" FontSize="13" FontWeight="SemiBold"
+                                    Cursor="Hand" Command="{Binding SwitchToMeiHuaPuCommand}"
+                                    BorderThickness="0" Margin="0,0,3,0">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#F5F5F4"/>
+                                        <Setter Property="Foreground" Value="#78716C"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                                            CornerRadius="6" Padding="10,0">
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsMeiHuaPu}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource EmeraldBrush}"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <Button Content="我的棋局" Height="32" FontSize="13" FontWeight="SemiBold"
+                                    Cursor="Hand" Command="{Binding SwitchToUserRecordsCommand}"
+                                    BorderThickness="0" Margin="3,0,0,0">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#F5F5F4"/>
+                                        <Setter Property="Foreground" Value="#78716C"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                                            CornerRadius="6" Padding="10,0">
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsUserSource}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource VioletBrush}"/>
+                                                <Setter Property="Foreground" Value="White"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </UniformGrid>
+
+                        <!-- 下拉框 + 收藏按钮 -->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox Grid.Column="0"
+                                      ItemsSource="{Binding DisplayRecords}"
+                                      SelectedItem="{Binding SelectedRecord}"
+                                      Style="{StaticResource ModernComboBox}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border CornerRadius="4" Padding="6,2" Margin="0,0,10,0">
+                                                <Border.Style>
+                                                    <Style TargetType="Border">
+                                                        <Setter Property="Background" Value="#F5F5F4"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Source}" Value="MeiHuaPu">
+                                                                <Setter Property="Background" Value="#ECFDF5"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Source}" Value="User">
+                                                                <Setter Property="Background" Value="#F3E8FF"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Border.Style>
+                                                <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="12">
+                                                    <TextBlock.Style>
+                                                        <Style TargetType="TextBlock">
+                                                            <Setter Property="Foreground" Value="#78716C"/>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Source}" Value="MeiHuaPu">
+                                                                    <Setter Property="Foreground" Value="#059669"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding Source}" Value="User">
+                                                                    <Setter Property="Foreground" Value="#7C3AED"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </TextBlock.Style>
+                                                </TextBlock>
+                                            </Border>
+                                            <TextBlock Text="{Binding Title}" VerticalAlignment="Center"
+                                                       Foreground="{DynamicResource TextPrimaryBrush}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+
+                            <!-- 收藏星标 -->
+                            <Button Grid.Column="1" Width="36" Height="36" Margin="6,0,0,0"
+                                    Cursor="Hand" BorderThickness="0" Background="Transparent"
+                                    Command="{Binding ToggleFavoriteCommand}"
+                                    ToolTip="收藏 / 取消收藏">
+                                <TextBlock FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Text" Value="☆"/>
+                                            <Setter Property="Foreground" Value="#D4D4D4"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsCurrentFavorite}" Value="True">
+                                                    <Setter Property="Text" Value="★"/>
+                                                    <Setter Property="Foreground" Value="#F59E0B"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Button>
+                        </Grid>
+
+                        <!-- 用户棋局操作按钮 -->
+                        <StackPanel Orientation="Horizontal" Margin="0,8,0,0"
+                                    Visibility="{Binding IsUserSource, Converter={StaticResource BoolToVis}}">
+                            <Button Content="＋ 新建" Height="32" FontSize="12" Cursor="Hand"
+                                    Command="{Binding NewUserRecordCommand}"
+                                    Foreground="White" Background="{DynamicResource EmeraldBrush}"
+                                    BorderThickness="0" Margin="0,0,4,0" Padding="10,0">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                                CornerRadius="6" Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
-                                        <TextBlock Text="{Binding Title}" VerticalAlignment="Center"
-                                                   Foreground="{DynamicResource TextPrimaryBrush}"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ComboBox.ItemTemplate>
-                        </ComboBox>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="bd" Property="Opacity" Value="0.85"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button Content="✕ 删除" Height="32" FontSize="12" Cursor="Hand"
+                                    Command="{Binding DeleteUserRecordCommand}"
+                                    Foreground="White" Background="#DC2626"
+                                    BorderThickness="0" Padding="10,0">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                                CornerRadius="6" Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="bd" Property="Opacity" Value="0.85"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </StackPanel>
 
                         <TextBlock Text="{Binding SelectedRecord.Description, TargetNullValue=''}"
                                    FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}"

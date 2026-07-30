@@ -37,10 +37,28 @@ public class MeiHuaPuRecord
     /// </summary>
     public int TotalSteps => Moves.Count;
 
+    /// <summary>
+    /// 来源：MeiHuaPu 或 User
+    /// </summary>
+    [System.Text.Json.Serialization.JsonIgnore]
+    public RecordSource Source { get; set; } = RecordSource.MeiHuaPu;
+
+    /// <summary>
+    /// 是否已收藏
+    /// </summary>
+    [System.Text.Json.Serialization.JsonIgnore]
+    public bool IsFavorite { get; set; }
+
     public override string ToString()
     {
         return $"[{Id}] {Title} ({TotalSteps}步)";
     }
+}
+
+public enum RecordSource
+{
+    MeiHuaPu,
+    User
 }
 
 /// <summary>
