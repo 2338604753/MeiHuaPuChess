@@ -1,0 +1,31 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ====== 朱砂暖煦 ====== -->
+    <Color x:Key="AccentIndigo">#C2410C</Color>
+    <Color x:Key="AccentEmerald">#B45309</Color>
+    <Color x:Key="AccentAmber">#EA580C</Color>
+    <Color x:Key="AccentViolet">#DC2626</Color>
+    <Color x:Key="AccentRose">#E11D48</Color>
+    <Color x:Key="AccentTeal">#A21CAF</Color>
+    <Color x:Key="AccentSky">#2563EB</Color>
+
+    <SolidColorBrush x:Key="IndigoBrush" Color="#C2410C"/>
+    <SolidColorBrush x:Key="EmeraldBrush" Color="#B45309"/>
+    <SolidColorBrush x:Key="AmberBrush" Color="#EA580C"/>
+    <SolidColorBrush x:Key="VioletBrush" Color="#DC2626"/>
+    <SolidColorBrush x:Key="RoseBrush" Color="#E11D48"/>
+    <SolidColorBrush x:Key="TealBrush" Color="#A21CAF"/>
+    <SolidColorBrush x:Key="SkyBrush" Color="#2563EB"/>
+
+    <SolidColorBrush x:Key="WindowBgBrush" Color="#FEF7F2"/>
+    <SolidColorBrush x:Key="BoardFrameBrush" Color="#3B1F0E"/>
+    <Color x:Key="TextPrimaryColor">#1C0F06</Color>
+    <Color x:Key="TextSecondaryColor">#8B6F5E</Color>
+
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="#1C0F06"/>
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="#8B6F5E"/>
+    <SolidColorBrush x:Key="CardBorderBrush" Color="#F0E0D5"/>
+    <SolidColorBrush x:Key="StatusBarBrush" Color="#1C0F06"/>
+
+</ResourceDictionary>

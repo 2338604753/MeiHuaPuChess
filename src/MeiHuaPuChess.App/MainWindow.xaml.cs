@@ -1,4 +1,5 @@
 using System.Windows;
+using System.Windows.Controls;
 using MeiHuaPuChess.App.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using MeiHuaPuChess.Core.Services;
@@ -57,5 +58,16 @@ public partial class MainWindow : Window
                 _viewModel.SelectedRecord = _viewModel.Records[0];
             }
         };
+    }
+
+    private void OnThemeClick(object sender, RoutedEventArgs e)
+    {
+        if (sender is not Button btn || btn.Tag is not string theme) return;
+        var rd = (ResourceDictionary)Resources;
+        rd.MergedDictionaries.Clear();
+        rd.MergedDictionaries.Add(new ResourceDictionary
+        {
+            Source = new Uri($"Themes/{theme}.xaml", UriKind.Relative)
+        });
     }
 }

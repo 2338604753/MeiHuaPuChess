@@ -12,68 +12,35 @@
         Width="1280" Height="820"
         MinWidth="1024" MinHeight="680"
         WindowStartupLocation="CenterScreen"
-        Background="#F3F0EB">
+        Background="{DynamicResource WindowBgBrush}">
 
     <Window.Resources>
-        <converters:BoolToVisibilityConverter x:Key="BoolToVis"/>
-        <converters:SideToColorConverter x:Key="SideToColor"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/IndigoJasmine.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
 
-        <!-- ================================================================
-             基础色板
-        ================================================================ -->
-        <SolidColorBrush x:Key="TextPrimary" Color="#1C1917"/>
-        <SolidColorBrush x:Key="TextSecondary" Color="#78716C"/>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVis"/>
+            <converters:SideToColorConverter x:Key="SideToColor"/>
         <SolidColorBrush x:Key="TextMuted" Color="#A8A29E"/>
-        <SolidColorBrush x:Key="CardBorder" Color="#E7E5E4"/>
-
-        <!-- 区域专属配色 -->
-        <Color x:Key="AccentIndigo">#4F46E5</Color>
-        <Color x:Key="AccentEmerald">#059669</Color>
-        <Color x:Key="AccentAmber">#D97706</Color>
-        <Color x:Key="AccentViolet">#7C3AED</Color>
-        <Color x:Key="AccentRose">#E11D48</Color>
-        <Color x:Key="AccentTeal">#0D9488</Color>
-        <Color x:Key="AccentSky">#0284C7</Color>
-
-        <SolidColorBrush x:Key="IndigoBrush" Color="#4F46E5"/>
-        <SolidColorBrush x:Key="EmeraldBrush" Color="#059669"/>
-        <SolidColorBrush x:Key="AmberBrush" Color="#D97706"/>
-        <SolidColorBrush x:Key="VioletBrush" Color="#7C3AED"/>
-        <SolidColorBrush x:Key="RoseBrush" Color="#E11D48"/>
-        <SolidColorBrush x:Key="TealBrush" Color="#0D9488"/>
-        <SolidColorBrush x:Key="SkyBrush" Color="#0284C7"/>
 
         <DropShadowEffect x:Key="CardShadow" BlurRadius="12" ShadowDepth="2"
                           Direction="270" Opacity="0.08" Color="#000000"/>
         <DropShadowEffect x:Key="BtnShadow" BlurRadius="4" ShadowDepth="1"
                           Direction="270" Opacity="0.15" Color="#000000"/>
 
-        <!-- ================================================================
-             带左侧色条的卡片
-        ================================================================ -->
+        <!-- 卡片 -->
         <Style x:Key="CardStyle" TargetType="Border">
             <Setter Property="Background" Value="White"/>
             <Setter Property="CornerRadius" Value="12"/>
             <Setter Property="Padding" Value="16"/>
-            <Setter Property="BorderBrush" Value="{StaticResource CardBorder}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Effect" Value="{StaticResource CardShadow}"/>
             <Setter Property="Margin" Value="0,0,0,14"/>
         </Style>
 
-        <!-- ================================================================
-             章节标题（带彩色圆点）
-        ================================================================ -->
-        <Style x:Key="SectionHeaderStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="12"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Foreground" Value="{StaticResource TextSecondary}"/>
-            <Setter Property="Margin" Value="0,0,0,6"/>
-        </Style>
-
-        <!-- ================================================================
-             按钮模板
-        ================================================================ -->
+        <!-- 按钮模板 -->
         <ControlTemplate x:Key="BtnTemplate" TargetType="Button">
             <Border x:Name="border"
                     Background="{TemplateBinding Background}"
@@ -104,25 +71,24 @@
         </Style>
 
         <Style x:Key="IndigoButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
-            <Setter Property="Background" Value="{StaticResource IndigoBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource IndigoBrush}"/>
         </Style>
         <Style x:Key="EmeraldButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
-            <Setter Property="Background" Value="{StaticResource EmeraldBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource EmeraldBrush}"/>
         </Style>
         <Style x:Key="RoseButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
-            <Setter Property="Background" Value="{StaticResource RoseBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource RoseBrush}"/>
         </Style>
         <Style x:Key="AmberButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
-            <Setter Property="Background" Value="{StaticResource AmberBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource AmberBrush}"/>
         </Style>
         <Style x:Key="SkyButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
-            <Setter Property="Background" Value="{StaticResource SkyBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource SkyBrush}"/>
         </Style>
         <Style x:Key="SlateButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
             <Setter Property="Background" Value="#78716C"/>
         </Style>
 
-        <!-- 导航小按钮 -->
         <Style x:Key="NavBtn" TargetType="Button">
             <Setter Property="Height" Value="40"/>
             <Setter Property="Width" Value="42"/>
@@ -133,9 +99,7 @@
             <Setter Property="Template" Value="{StaticResource BtnTemplate}"/>
         </Style>
 
-        <!-- ================================================================
-             模式切换 — 两个独立彩色 ToggleButton
-        ================================================================ -->
+        <!-- 模式 Toggle -->
         <Style x:Key="ReviewToggle" TargetType="ToggleButton">
             <Setter Property="Height" Value="42"/>
             <Setter Property="FontSize" Value="14"/>
@@ -145,8 +109,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
-                        <Border x:Name="bg" Background="#F5F5F4" CornerRadius="8,0,0,8"
-                                Padding="16,0">
+                        <Border x:Name="bg" Background="#F5F5F4" CornerRadius="8,0,0,8" Padding="16,0">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Ellipse x:Name="dot" Width="8" Height="8" Fill="#D6D3D1"
                                          VerticalAlignment="Center" Margin="0,0,8,0"/>
@@ -155,12 +118,9 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="bg" Property="Background" Value="#4F46E5"/>
+                                <Setter TargetName="bg" Property="Background" Value="{DynamicResource IndigoBrush}"/>
                                 <Setter Property="Foreground" Value="White"/>
                                 <Setter TargetName="dot" Property="Fill" Value="#A5B4FC"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="bg" Property="Opacity" Value="0.9"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -177,8 +137,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
-                        <Border x:Name="bg" Background="#F5F5F4" CornerRadius="0,8,8,0"
-                                Padding="16,0">
+                        <Border x:Name="bg" Background="#F5F5F4" CornerRadius="0,8,8,0" Padding="16,0">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                 <Ellipse x:Name="dot" Width="8" Height="8" Fill="#D6D3D1"
                                          VerticalAlignment="Center" Margin="0,0,8,0"/>
@@ -187,12 +146,9 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="bg" Property="Background" Value="#D97706"/>
+                                <Setter TargetName="bg" Property="Background" Value="{DynamicResource AmberBrush}"/>
                                 <Setter Property="Foreground" Value="White"/>
                                 <Setter TargetName="dot" Property="Fill" Value="#FDE68A"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="bg" Property="Opacity" Value="0.9"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -200,15 +156,13 @@
             </Setter>
         </Style>
 
-        <!-- ================================================================
-             ComboBox 样式
-        ================================================================ -->
+        <!-- ComboBox -->
         <Style x:Key="ModernComboBox" TargetType="ComboBox">
             <Setter Property="Height" Value="42"/>
             <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}"/>
             <Setter Property="Background" Value="#FAFAF9"/>
-            <Setter Property="BorderBrush" Value="{StaticResource CardBorder}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource CardBorderBrush}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="12,0"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -221,9 +175,8 @@
                                           Focusable="False" ClickMode="Press">
                                 <ToggleButton.Template>
                                     <ControlTemplate TargetType="ToggleButton">
-                                        <Border x:Name="border"
-                                                Background="{TemplateBinding Background}"
-                                                BorderBrush="{StaticResource CardBorder}"
+                                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                                                BorderBrush="{DynamicResource CardBorderBrush}"
                                                 BorderThickness="1" CornerRadius="8" Cursor="Hand">
                                             <Grid>
                                                 <ContentPresenter Margin="12,0,30,0" VerticalAlignment="Center"
@@ -241,7 +194,7 @@
                                    IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
                                    Placement="Bottom" Focusable="False" PopupAnimation="Fade">
                                 <Border Background="White" CornerRadius="10"
-                                        BorderBrush="{StaticResource CardBorder}" BorderThickness="1"
+                                        BorderBrush="{DynamicResource CardBorderBrush}" BorderThickness="1"
                                         Margin="0,2,0,0">
                                     <Border.Effect>
                                         <DropShadowEffect BlurRadius="16" ShadowDepth="4" Opacity="0.12"/>
@@ -261,7 +214,7 @@
                         <Setter Property="Height" Value="40"/>
                         <Setter Property="Padding" Value="14,0"/>
                         <Setter Property="FontSize" Value="13"/>
-                        <Setter Property="Foreground" Value="{StaticResource TextPrimary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}"/>
                         <Setter Property="Background" Value="Transparent"/>
                         <Setter Property="Cursor" Value="Hand"/>
                         <Setter Property="Template">
@@ -277,7 +230,7 @@
                                         </Trigger>
                                         <Trigger Property="IsSelected" Value="True">
                                             <Setter TargetName="itemBorder" Property="Background" Value="#ECFDF5"/>
-                                            <Setter Property="Foreground" Value="#059669"/>
+                                            <Setter Property="Foreground" Value="{DynamicResource EmeraldBrush}"/>
                                         </Trigger>
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
@@ -288,9 +241,7 @@
             </Setter>
         </Style>
 
-        <!-- ================================================================
-             走棋记录 ItemTemplate（红黑双方分色）
-        ================================================================ -->
+        <!-- 走棋记录 ItemTemplate -->
         <DataTemplate x:Key="MoveItemTemplate" DataType="{x:Type models:MoveViewModel}">
             <Border Padding="10,5" CornerRadius="6" Margin="0,1">
                 <Border.Style>
@@ -308,7 +259,6 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <!-- 步数编号圆点 -->
                     <Border Grid.Column="0" Width="22" Height="22" CornerRadius="11"
                             VerticalAlignment="Center" Margin="0,0,10,0">
                         <Border.Style>
@@ -316,7 +266,7 @@
                                 <Setter Property="Background" Value="#F5F5F4"/>
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding IsCurrentStep}" Value="True">
-                                        <Setter Property="Background" Value="#4F46E5"/>
+                                        <Setter Property="Background" Value="{DynamicResource IndigoBrush}"/>
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -335,16 +285,15 @@
                             </TextBlock.Style>
                         </TextBlock>
                     </Border>
-                    <!-- 走棋文本 -->
                     <TextBlock Grid.Column="1" FontSize="13" FontFamily="KaiTi, SimSun, Consolas"
                                VerticalAlignment="Center" Text="{Binding DisplayText}">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
-                                <Setter Property="Foreground" Value="{StaticResource TextSecondary}"/>
+                                <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}"/>
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding IsCurrentStep}" Value="True">
                                         <Setter Property="FontWeight" Value="Bold"/>
-                                        <Setter Property="Foreground" Value="#4338CA"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource IndigoBrush}"/>
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -353,6 +302,7 @@
                 </Grid>
             </Border>
         </DataTemplate>
+        </ResourceDictionary>
     </Window.Resources>
 
     <Grid>
@@ -362,7 +312,8 @@
         </Grid.ColumnDefinitions>
 
         <!-- ===== 左侧：棋盘 ===== -->
-        <Border Grid.Column="0" Margin="16" Background="#292524" CornerRadius="12">
+        <Border Grid.Column="0" Margin="16"
+                Background="{DynamicResource BoardFrameBrush}" CornerRadius="12">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="20" ShadowDepth="4" Opacity="0.25"/>
             </Border.Effect>
@@ -373,14 +324,36 @@
         </Border>
 
         <!-- ===== 右侧：控制面板 ===== -->
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Padding="0,20,20,20">
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Padding="0,16,20,20">
             <StackPanel>
+
+                <!-- ===== 主题切换 ===== -->
+                <Border Style="{StaticResource CardStyle}" Padding="10" Margin="0,0,0,10">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="主题" VerticalAlignment="Center" FontSize="12"
+                                   Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,10,0"/>
+                        <Button x:Name="ThemeIndigo" Width="28" Height="28" Cursor="Hand"
+                                ToolTip="靛蓝茉莉" Click="OnThemeClick" Tag="IndigoJasmine"
+                                Style="{StaticResource BaseButton}" Padding="0"
+                                Background="#4F46E5" Margin="0,0,6,0"/>
+                        <Button x:Name="ThemeBamboo" Width="28" Height="28" Cursor="Hand"
+                                ToolTip="竹青翠微" Click="OnThemeClick" Tag="BambooGreen"
+                                Style="{StaticResource BaseButton}" Padding="0"
+                                Background="#15803D" Margin="0,0,6,0"/>
+                        <Button x:Name="ThemeCinnabar" Width="28" Height="28" Cursor="Hand"
+                                ToolTip="朱砂暖煦" Click="OnThemeClick" Tag="CinnabarWarm"
+                                Style="{StaticResource BaseButton}" Padding="0"
+                                Background="#C2410C"/>
+                    </StackPanel>
+                </Border>
 
                 <!-- ========== 模式选择 ========== -->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                    <Ellipse Width="8" Height="8" Fill="#4F46E5" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                    <Ellipse Width="8" Height="8" Fill="{DynamicResource IndigoBrush}"
+                             VerticalAlignment="Center" Margin="0,0,6,0"/>
                     <TextBlock Text="模式选择" VerticalAlignment="Center"
-                               FontSize="12" FontWeight="SemiBold" Foreground="#78716C"/>
+                               FontSize="12" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextSecondaryBrush}"/>
                 </StackPanel>
                 <Border Style="{StaticResource CardStyle}" Padding="4">
                     <UniformGrid Columns="2" Rows="1">
@@ -397,9 +370,11 @@
 
                 <!-- ========== 棋局选择 ========== -->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                    <Ellipse Width="8" Height="8" Fill="#059669" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                    <Ellipse Width="8" Height="8" Fill="{DynamicResource EmeraldBrush}"
+                             VerticalAlignment="Center" Margin="0,0,6,0"/>
                     <TextBlock Text="棋局选择" VerticalAlignment="Center"
-                               FontSize="12" FontWeight="SemiBold" Foreground="#78716C"/>
+                               FontSize="12" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextSecondaryBrush}"/>
                 </StackPanel>
                 <Border Style="{StaticResource CardStyle}">
                     <StackPanel>
@@ -411,17 +386,17 @@
                                     <StackPanel Orientation="Horizontal">
                                         <Border Background="#ECFDF5" CornerRadius="4" Padding="6,2" Margin="0,0,10,0">
                                             <TextBlock Text="{Binding Id}" FontWeight="Bold" FontSize="12"
-                                                       Foreground="#059669"/>
+                                                       Foreground="{DynamicResource EmeraldBrush}"/>
                                         </Border>
                                         <TextBlock Text="{Binding Title}" VerticalAlignment="Center"
-                                                   Foreground="{StaticResource TextPrimary}"/>
+                                                   Foreground="{DynamicResource TextPrimaryBrush}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
 
                         <TextBlock Text="{Binding SelectedRecord.Description, TargetNullValue=''}"
-                                   FontSize="12" Foreground="{StaticResource TextSecondary}"
+                                   FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}"
                                    TextWrapping="Wrap" Margin="0,10,0,0"
                                    MaxHeight="48" TextTrimming="CharacterEllipsis"/>
 
@@ -446,9 +421,11 @@
 
                 <!-- ========== 当前进度 ========== -->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                    <Ellipse Width="8" Height="8" Fill="#D97706" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                    <Ellipse Width="8" Height="8" Fill="{DynamicResource AmberBrush}"
+                             VerticalAlignment="Center" Margin="0,0,6,0"/>
                     <TextBlock Text="当前进度" VerticalAlignment="Center"
-                               FontSize="12" FontWeight="SemiBold" Foreground="#78716C"/>
+                               FontSize="12" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextSecondaryBrush}"/>
                 </StackPanel>
                 <Border Style="{StaticResource CardStyle}">
                     <Border.Background>
@@ -459,10 +436,10 @@
                     </Border.Background>
                     <StackPanel>
                         <TextBlock FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"
-                                   Foreground="#D97706" Margin="0,4,0,0"
+                                   Foreground="{DynamicResource AmberBrush}" Margin="0,4,0,0"
                                    Text="{Binding StepProgress}"/>
                         <TextBlock FontSize="13" HorizontalAlignment="Center"
-                                   Foreground="{StaticResource TextSecondary}" Margin="0,6,0,0"
+                                   Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,6,0,0"
                                    Text="{Binding GameStatus}"
                                    TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                         <Border Background="#FFF7ED" CornerRadius="8" Padding="8,4" Margin="0,8,0,0">
@@ -483,30 +460,28 @@
                 <!-- ========== 棋谱导航 ========== -->
                 <StackPanel Visibility="{Binding IsReviewMode, Converter={StaticResource BoolToVis}}">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                        <Ellipse Width="8" Height="8" Fill="#7C3AED" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                        <Ellipse Width="8" Height="8" Fill="{DynamicResource VioletBrush}"
+                                 VerticalAlignment="Center" Margin="0,0,6,0"/>
                         <TextBlock Text="棋谱导航" VerticalAlignment="Center"
-                                   FontSize="12" FontWeight="SemiBold" Foreground="#78716C"/>
+                                   FontSize="12" FontWeight="SemiBold"
+                                   Foreground="{DynamicResource TextSecondaryBrush}"/>
                     </StackPanel>
                     <Border Style="{StaticResource CardStyle}">
                         <StackPanel>
                             <UniformGrid Columns="4" Rows="1">
-                                <Button Content="⏮" ToolTip="最前"
-                                        Style="{StaticResource NavBtn}"
-                                        Background="#7C3AED"
+                                <Button Content="⏮" ToolTip="最前" Style="{StaticResource NavBtn}"
+                                        Background="{DynamicResource VioletBrush}"
                                         Command="{Binding GoToFirstCommand}"/>
-                                <Button Content="◀" ToolTip="上一步"
-                                        Style="{StaticResource NavBtn}"
-                                        Background="#8B5CF6"
+                                <Button Content="◀" ToolTip="上一步" Style="{StaticResource NavBtn}"
+                                        Background="{DynamicResource VioletBrush}"
                                         Command="{Binding PreviousStepCommand}"
                                         IsEnabled="{Binding CanGoPrevious}"/>
-                                <Button Content="▶" ToolTip="下一步"
-                                        Style="{StaticResource NavBtn}"
-                                        Background="#8B5CF6"
+                                <Button Content="▶" ToolTip="下一步" Style="{StaticResource NavBtn}"
+                                        Background="{DynamicResource VioletBrush}"
                                         Command="{Binding NextStepCommand}"
                                         IsEnabled="{Binding CanGoForward}"/>
-                                <Button Content="⏭" ToolTip="最后"
-                                        Style="{StaticResource NavBtn}"
-                                        Background="#7C3AED"
+                                <Button Content="⏭" ToolTip="最后" Style="{StaticResource NavBtn}"
+                                        Background="{DynamicResource VioletBrush}"
                                         Command="{Binding GoToLastCommand}"/>
                             </UniformGrid>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,14,0,0">
@@ -515,11 +490,11 @@
                                         Command="{Binding ToggleAutoPlayCommand}"
                                         Width="100" Height="36" FontSize="13"/>
                                 <TextBlock Text="速度(秒)" VerticalAlignment="Center" Margin="10,0,4,0"
-                                           Foreground="{StaticResource TextSecondary}" FontSize="13"/>
+                                           Foreground="{DynamicResource TextSecondaryBrush}" FontSize="13"/>
                                 <TextBox Text="{Binding AutoPlaySpeed, UpdateSourceTrigger=PropertyChanged}"
                                          Width="44" Height="32" TextAlignment="Center"
                                          FontSize="13" VerticalContentAlignment="Center"
-                                         BorderBrush="{StaticResource CardBorder}"
+                                         BorderBrush="{DynamicResource CardBorderBrush}"
                                          Background="#FAFAF9" BorderThickness="1"/>
                             </StackPanel>
                         </StackPanel>
@@ -528,7 +503,6 @@
 
                 <!-- ========== 训练操作 ========== -->
                 <StackPanel Visibility="{Binding IsTrainingMode, Converter={StaticResource BoolToVis}}">
-                    <!-- 提示信息 -->
                     <Border CornerRadius="12" Padding="14" Margin="0,0,0,14"
                             Visibility="{Binding HasHint, Converter={StaticResource BoolToVis}}">
                         <Border.Style>
@@ -562,15 +536,17 @@
                                 </TextBlock.Style>
                             </TextBlock>
                             <TextBlock Text="{Binding HintMessage}" FontSize="13" TextWrapping="Wrap"
-                                       Foreground="{StaticResource TextPrimary}"
+                                       Foreground="{DynamicResource TextPrimaryBrush}"
                                        FontWeight="SemiBold" VerticalAlignment="Center"/>
                         </StackPanel>
                     </Border>
 
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                        <Ellipse Width="8" Height="8" Fill="#E11D48" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                        <Ellipse Width="8" Height="8" Fill="{DynamicResource RoseBrush}"
+                                 VerticalAlignment="Center" Margin="0,0,6,0"/>
                         <TextBlock Text="训练操作" VerticalAlignment="Center"
-                                   FontSize="12" FontWeight="SemiBold" Foreground="#78716C"/>
+                                   FontSize="12" FontWeight="SemiBold"
+                                   Foreground="{DynamicResource TextSecondaryBrush}"/>
                     </StackPanel>
                     <Border Style="{StaticResource CardStyle}">
                         <StackPanel>
@@ -587,9 +563,11 @@
 
                 <!-- ========== 走棋记录 ========== -->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                    <Ellipse Width="8" Height="8" Fill="#0D9488" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                    <Ellipse Width="8" Height="8" Fill="{DynamicResource TealBrush}"
+                             VerticalAlignment="Center" Margin="0,0,6,0"/>
                     <TextBlock Text="走棋记录" VerticalAlignment="Center"
-                               FontSize="12" FontWeight="SemiBold" Foreground="#78716C"/>
+                               FontSize="12" FontWeight="SemiBold"
+                               Foreground="{DynamicResource TextSecondaryBrush}"/>
                 </StackPanel>
                 <Border Style="{StaticResource CardStyle}" Padding="10" MaxHeight="200">
                     <ListBox ItemsSource="{Binding MoveHistoryDisplay}"
@@ -611,9 +589,10 @@
 
         <!-- ===== 底部状态栏 ===== -->
         <Border Grid.ColumnSpan="2" VerticalAlignment="Bottom"
-                Background="#1C1917" Padding="16,10" Height="40">
+                Background="{DynamicResource StatusBarBrush}" Padding="16,10" Height="40">
             <StackPanel Orientation="Horizontal">
-                <Border Background="#4F46E5" CornerRadius="4" Padding="8,3" Margin="0,0,16,0">
+                <Border Background="{DynamicResource IndigoBrush}" CornerRadius="4"
+                        Padding="8,3" Margin="0,0,16,0">
                     <TextBlock Foreground="White" FontSize="11" FontWeight="SemiBold"
                                Text="{Binding CurrentSide, Mode=OneWay}"/>
                 </Border>
