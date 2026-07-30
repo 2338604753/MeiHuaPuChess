@@ -66,10 +66,17 @@ public partial class ChessBoardView : UserControl
         set => SetValue(IsReadOnlyProperty, value);
     }
 
+    /// <summary>局面编辑模式</summary>
+    public bool IsEditMode { get; set; }
+
+    public Side EditingSide { get; set; } = Side.Red;
+
     private (int Row, int Col)? _selectedPiece;
     private List<(int Row, int Col)> _legalMoves = new();
 
     public event Action<int, int, int, int>? OnPlayerMove;
+    /// <summary>编辑模式下棋子移动事件</summary>
+    public event Action<int, int, int, int>? OnEditMove;
 
     private double _cellSize;
     private double _offsetX;
@@ -598,12 +605,19 @@ public partial class ChessBoardView : UserControl
 
     private void OnBoardClick(object sender, MouseButtonEventArgs e)
     {
-        if (IsReadOnly) return;
+        if (IsReadOnly && !IsEditMode) return;
 
         var pos = e.GetPosition(_boardCanvas);
         var (row, col) = PixelToBoard(pos.X, pos.Y);
 
         if (row < 0 || row >= Rows || col < 0 || col >= Cols) return;
+
+        // 编辑模式：点击选中 → 点击目标 → 触发移动事件
+        if (IsEditMode)
+        {
+            HandleEditClick(row, col);
+            return;
+        }
 
         if (_selectedPiece == null)
         {
@@ -629,14 +643,41 @@ public partial class ChessBoardView : UserControl
         }
     }
 
+    private void HandleEditClick(int row, int col)
+    {
+        var piece = Engine?.Board?[row, col];
+
+        if (_selectedPiece == null)
+        {
+            // 点击棋子 → 选中
+            if (piece != null)
+            {
+                _selectedPiece = (row, col);
+                DrawOverlays();
+            }
+        }
+        else
+        {
+            var from = _selectedPiece.Value;
+            _selectedPiece = null;
+            DrawOverlays();
+
+            // 点击同一位置 → 取消选中
+            if (from.Row == row && from.Col == col) return;
+
+            // 移动棋子（不论目标是空还是有子）
+            OnEditMove?.Invoke(from.Row, from.Col, row, col);
+        }
+    }
+
     private void SelectPiece(int row, int col)
     {
-        if (IsReadOnly) return;
+        if (IsReadOnly && !IsEditMode) return;
 
         var piece = Engine?.Board?[row, col];
         if (piece == null) return;
 
-        if (Engine?.Phase == GamePhase.BlackTurn && piece.Side != Side.Black) return;
+        if (!IsEditMode && Engine?.Phase == GamePhase.BlackTurn && piece.Side != Side.Black) return;
 
         _selectedPiece = (row, col);
 

@@ -135,6 +135,101 @@ public partial class MainViewModel : ObservableObject
     partial void OnSelectedRecordChanged(MeiHuaPuRecord? value)
     {
         OnPropertyChanged(nameof(IsCurrentFavorite));
+        // 切换棋局时自动退出编辑模式
+        if (IsEditing) CancelEditRecord();
+    }
+
+    // ================================================================
+    //  局面编辑
+    // ================================================================
+
+    [ObservableProperty]
+    private bool _isEditing;
+
+    [ObservableProperty]
+    private string _editingStatus = "";
+
+    /// <summary>编辑中的临时走法列表</summary>
+    private List<MeiHuaPuMove> _editMoves = new();
+
+    public void OnEditMove(int fromRow, int fromCol, int toRow, int toCol)
+    {
+        if (!IsEditing || SelectedRecord == null) return;
+
+        // 在引擎中执行走法（更新棋盘状态）
+        var piece = Engine.Board[fromRow, fromCol];
+        if (piece == null) return;
+        Engine.Board.MovePiece(fromRow, fromCol, toRow, toCol);
+
+        var side = _editMoves.Count % 2 == 0 ? "Red" : "Black";
+        var step = _editMoves.Count + 1;
+        var notation = GenerateNotation(fromRow, fromCol, toRow, toCol);
+
+        _editMoves.Add(new MeiHuaPuMove
+        {
+            StepNumber = step,
+            Side = side,
+            Notation = notation,
+            FromRow = fromRow,
+            FromCol = fromCol,
+            ToRow = toRow,
+            ToCol = toCol
+        });
+
+        EditingStatus = $"已录入 {_editMoves.Count} 步 — {(side == "Red" ? "红" : "黑")}方 {notation}";
+    }
+
+    private string GenerateNotation(int fR, int fC, int tR, int tC)
+    {
+        // 简化记谱，后续可扩展为传统记谱法
+        return $"({fR},{fC})→({tR},{tC})";
+    }
+
+    [RelayCommand]
+    public void StartEditRecord()
+    {
+        if (SelectedRecord == null || CurrentSource != RecordSource.User) return;
+        IsEditing = true;
+        _editMoves.Clear();
+
+        // 加载棋局到引擎，导航到最后一步以显示当前局面
+        _gameService.StartReview(SelectedRecord);
+        Engine.GoToLast();
+
+        if (SelectedRecord.Moves.Count > 0)
+        {
+            _editMoves.AddRange(SelectedRecord.Moves);
+            EditingStatus = $"已加载 {_editMoves.Count} 步，点击棋子继续编辑";
+        }
+        else
+        {
+            // 空棋局：直接展示初始局面
+            EditingStatus = "点击棋子开始编辑走法";
+        }
+    }
+
+    [RelayCommand]
+    public void SaveEditRecord()
+    {
+        if (SelectedRecord == null) return;
+        SelectedRecord.Moves = new List<MeiHuaPuMove>(_editMoves);
+        SaveCurrentUserRecord();
+        IsEditing = false;
+        _editMoves.Clear();
+        EditingStatus = "";
+        // 重置引擎到棋局初始状态
+        _gameService.StartReview(SelectedRecord);
+    }
+
+    [RelayCommand]
+    public void CancelEditRecord()
+    {
+        IsEditing = false;
+        _editMoves.Clear();
+        EditingStatus = "";
+        // 恢复到编辑前的棋局状态
+        if (SelectedRecord != null)
+            _gameService.StartReview(SelectedRecord);
     }
 
     // ================================================================

@@ -28,6 +28,23 @@ public partial class MainWindow : Window
         // 设置棋盘引用
         ChessBoard.Engine = _viewModel.Engine;
         ChessBoard.OnPlayerMove += _viewModel.OnPlayerMove;
+        ChessBoard.OnEditMove += (fR, fC, tR, tC) =>
+        {
+            _viewModel.OnEditMove(fR, fC, tR, tC);
+            Dispatcher.Invoke(() => ChessBoard.DrawPieces());
+        };
+
+        // 编辑模式切换：同步 BoardView 状态
+        _viewModel.PropertyChanged += (s, e) =>
+        {
+            if (e.PropertyName == nameof(MainViewModel.IsEditing))
+            {
+                ChessBoard.IsEditMode = _viewModel.IsEditing;
+                ChessBoard.IsReadOnly = _viewModel.IsEditing; // 编辑时禁止正常走棋
+                ChessBoard.ClearSelectionPublic();
+                ChessBoard.DrawPieces();
+            }
+        };
 
         // 订阅引擎事件以刷新棋盘
         _viewModel.Engine.OnStateChanged += () =>

@@ -34,7 +34,7 @@ public class BoolToVisibilityConverter : IValueConverter
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         bool boolValue = value is bool b && b;
-        bool invert = parameter is string s && s == "Invert";
+        bool invert = parameter is string s && s.Equals("Invert", StringComparison.OrdinalIgnoreCase);
         boolValue = invert ? !boolValue : boolValue;
         return boolValue ? Visibility.Visible : Visibility.Collapsed;
     }

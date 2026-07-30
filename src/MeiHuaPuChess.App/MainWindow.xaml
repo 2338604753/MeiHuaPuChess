@@ -550,8 +550,8 @@
                             </Button>
                         </Grid>
 
-                        <!-- 用户棋局操作按钮 -->
-                        <StackPanel Orientation="Horizontal" Margin="0,8,0,0"
+                        <!-- 用户棋局操作按钮 / 编辑模式 -->
+                        <StackPanel x:Name="UserRecordBtns" Orientation="Horizontal" Margin="0,8,0,0"
                                     Visibility="{Binding IsUserSource, Converter={StaticResource BoolToVis}}">
                             <Button Content="＋ 新建" Height="32" FontSize="12" Cursor="Hand"
                                     Command="{Binding NewUserRecordCommand}"
@@ -571,10 +571,30 @@
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
+                            <Button Content="✎ 编辑" Height="32" FontSize="12" Cursor="Hand"
+                                    Command="{Binding StartEditRecordCommand}"
+                                    Foreground="White" Background="{DynamicResource VioletBrush}"
+                                    BorderThickness="0" Margin="0,0,4,0" Padding="10,0"
+                                    Visibility="{Binding IsEditing, Converter={StaticResource BoolToVis}, ConverterParameter=invert}">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                                CornerRadius="6" Padding="{TemplateBinding Padding}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="bd" Property="Opacity" Value="0.85"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
                             <Button Content="✕ 删除" Height="32" FontSize="12" Cursor="Hand"
                                     Command="{Binding DeleteUserRecordCommand}"
                                     Foreground="White" Background="#DC2626"
-                                    BorderThickness="0" Padding="10,0">
+                                    BorderThickness="0" Padding="10,0"
+                                    Visibility="{Binding IsEditing, Converter={StaticResource BoolToVis}, ConverterParameter=invert}">
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <Border x:Name="bd" Background="{TemplateBinding Background}"
@@ -590,6 +610,49 @@
                                 </Button.Template>
                             </Button>
                         </StackPanel>
+
+                        <!-- 编辑模式提示 + 操作 -->
+                        <Border x:Name="EditBar" Background="#F3E8FF" CornerRadius="8" Padding="8,6"
+                                Margin="0,8,0,0"
+                                Visibility="{Binding IsEditing, Converter={StaticResource BoolToVis}}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding EditingStatus}"
+                                           FontSize="12" FontWeight="SemiBold" Foreground="#7C3AED"
+                                           VerticalAlignment="Center"/>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                    <Button Content="保存" Height="28" FontSize="12" Cursor="Hand"
+                                            Command="{Binding SaveEditRecordCommand}"
+                                            Foreground="White" Background="#059669"
+                                            BorderThickness="0" Padding="10,0" Margin="0,0,4,0">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                                        CornerRadius="5" Padding="{TemplateBinding Padding}">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Button Content="取消" Height="28" FontSize="12" Cursor="Hand"
+                                            Command="{Binding CancelEditRecordCommand}"
+                                            Foreground="#78716C" Background="#E5E5E5"
+                                            BorderThickness="0" Padding="10,0">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                                        CornerRadius="5" Padding="{TemplateBinding Padding}">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
 
                         <TextBlock Text="{Binding SelectedRecord.Description, TargetNullValue=''}"
                                    FontSize="12" Foreground="{DynamicResource TextSecondaryBrush}"
