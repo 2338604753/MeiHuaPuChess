@@ -11,7 +11,7 @@
 
 ## 截图
 
-> TODO：运行后截一张棋盘图放到这里
+![梅花谱象棋截图](assets/screenshot.png)
 
 ## 技术栈
 
@@ -48,14 +48,14 @@ src/
 需要 [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)。
 
 ```bash
-git clone https://github.com/$1 2338604753/MeiHuaPuChess.git
+git clone https://github.com/2338604753/MeiHuaPuChess.git
 cd MeiHuaPuChess
 dotnet run --project src/MeiHuaPuChess.App
 ```
 
 ## 下载
 
-前往 [Releases](https://github.com/$1 2338604753/MeiHuaPuChess/releases) 下载最新版本，解压双击 `MeiHuaPuChess.App.exe` 即可运行（无需安装 .NET 运行时）。
+前往 [Releases](https://github.com/2338604753/MeiHuaPuChess/releases) 下载最新版本，解压双击 `MeiHuaPuChess.App.exe` 即可运行（无需安装 .NET 运行时）。
 
 ## License
 
