@@ -1,0 +1,61 @@
+using System.Windows;
+using MeiHuaPuChess.App.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
+using MeiHuaPuChess.Core.Services;
+using MeiHuaPuChess.Data;
+
+namespace MeiHuaPuChess.App;
+
+public partial class MainWindow : Window
+{
+    private readonly MainViewModel _viewModel;
+
+    public MainWindow()
+    {
+        InitializeComponent();
+
+        // 设置 DI
+        var services = new ServiceCollection();
+        services.AddSingleton<IMeiHuaPuDataLoader, MeiHuaPuDataLoader>();
+        services.AddSingleton<IGameService, GameService>();
+        services.AddSingleton<MainViewModel>();
+        var provider = services.BuildServiceProvider();
+
+        _viewModel = provider.GetRequiredService<MainViewModel>();
+        DataContext = _viewModel;
+
+        // 设置棋盘引用
+        ChessBoard.Engine = _viewModel.Engine;
+        ChessBoard.OnPlayerMove += _viewModel.OnPlayerMove;
+
+        // 订阅引擎事件以刷新棋盘
+        _viewModel.Engine.OnStateChanged += () =>
+        {
+            Dispatcher.Invoke(() =>
+            {
+                ChessBoard.DrawPieces();
+                // 导航时清除选中状态
+                ChessBoard.ClearSelectionPublic();
+            });
+        };
+        _viewModel.Engine.OnRedMoveCompleted += (_) =>
+        {
+            Dispatcher.Invoke(() => ChessBoard.DrawPieces());
+        };
+        _viewModel.Engine.OnBlackMoveValidated += (result, hints) =>
+        {
+            Dispatcher.Invoke(() => ChessBoard.DrawPieces());
+        };
+
+        // 加载数据
+        Loaded += (s, e) =>
+        {
+            _viewModel.LoadRecords();
+            // 默认选择第一局（不自动开始）
+            if (_viewModel.Records.Count > 0)
+            {
+                _viewModel.SelectedRecord = _viewModel.Records[0];
+            }
+        };
+    }
+}

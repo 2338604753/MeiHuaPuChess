@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MeiHuaPuChess.App/MeiHuaPuChess.App.csproj" />
+    <Project Path="src/MeiHuaPuChess.Core/MeiHuaPuChess.Core.csproj" />
+    <Project Path="src/MeiHuaPuChess.Data/MeiHuaPuChess.Data.csproj" />
+  </Folder>
+</Solution>

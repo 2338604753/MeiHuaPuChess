@@ -1,0 +1,4100 @@
+{
+  "records": [
+    {
+      "id": "MH-001",
+      "title": "第一局：破巡河车吃卒用炮打象",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方巡河车贪吃黑卒，黑方趁机进马、用炮打底象，形成凌厉攻势。本局共19回合，黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马保中卒，形成屏风马雏形",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒活通左马",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车保炮",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进四",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马完成屏风马阵型",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "兵三进一",
+          "fromRow": 3,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": [
+            "吃兵弃卒，诱红车来吃",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车八平三",
+          "fromRow": 4,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": [
+            "挺3卒制马",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "炮二平三",
+          "fromRow": 7,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "马7进8",
+          "fromRow": 7,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 7,
+          "hints": [
+            "左马盘河出击——本局精髓",
+            "应走马7进8"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "车三进一",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "炮2进2",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": [
+            "骑河炮打双车",
+            "应走炮2进2"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "车三平七",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "马8进6",
+          "fromRow": 5,
+          "fromCol": 7,
+          "toRow": 3,
+          "toCol": 6,
+          "hints": [
+            "进马踏双",
+            "应走马8进6"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "车七进二",
+          "fromRow": 5,
+          "fromCol": 6,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "象7进5",
+          "fromRow": 9,
+          "fromCol": 2,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": [
+            "飞象固防",
+            "应走象7进5"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "车七退三",
+          "fromRow": 7,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "马6进8",
+          "fromRow": 3,
+          "fromCol": 6,
+          "toRow": 2,
+          "toCol": 7,
+          "hints": [
+            "马奔卧槽",
+            "应走马6进8"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "马二进一",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "马8进6",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 0,
+          "toCol": 6,
+          "hints": [
+            "马跳挂角将军",
+            "应走马8进6"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "帅五进一",
+          "fromRow": 9,
+          "fromCol": 4,
+          "toRow": 8,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "炮2平6",
+          "fromRow": 5,
+          "fromCol": 5,
+          "toRow": 5,
+          "toCol": 0,
+          "hints": [
+            "平炮叫杀",
+            "应走炮2平6"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "帅五平六",
+          "fromRow": 8,
+          "fromCol": 4,
+          "toRow": 8,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "炮8进6",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 1,
+          "toCol": 7,
+          "hints": [
+            "进炮压车",
+            "应走炮8进6"
+          ]
+        },
+        {
+          "step": 29,
+          "side": "Red",
+          "notation": "车一平二",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 0,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 30,
+          "side": "Black",
+          "notation": "车9进1",
+          "fromRow": 9,
+          "fromCol": 0,
+          "toRow": 8,
+          "toCol": 0,
+          "hints": [
+            "出车助攻",
+            "应走车9进1"
+          ]
+        },
+        {
+          "step": 31,
+          "side": "Red",
+          "notation": "车七平六",
+          "fromRow": 5,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 32,
+          "side": "Black",
+          "notation": "车2进8",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 1,
+          "toCol": 7,
+          "hints": [
+            "沉底车叫杀",
+            "应走车2进8"
+          ]
+        },
+        {
+          "step": 33,
+          "side": "Red",
+          "notation": "帅六进一",
+          "fromRow": 8,
+          "fromCol": 5,
+          "toRow": 7,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 34,
+          "side": "Black",
+          "notation": "马6进5",
+          "fromRow": 0,
+          "fromCol": 6,
+          "toRow": 1,
+          "toCol": 5,
+          "hints": [
+            "弃马踩炮——绝杀",
+            "应走马6进5"
+          ]
+        },
+        {
+          "step": 35,
+          "side": "Red",
+          "notation": "炮五退一",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 36,
+          "side": "Black",
+          "notation": "车2平4",
+          "fromRow": 1,
+          "fromCol": 7,
+          "toRow": 1,
+          "toCol": 5,
+          "hints": [
+            "平车叫将",
+            "应走车2平4"
+          ]
+        },
+        {
+          "step": 37,
+          "side": "Red",
+          "notation": "帅六平五",
+          "fromRow": 7,
+          "fromCol": 5,
+          "toRow": 7,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 38,
+          "side": "Black",
+          "notation": "车4退3",
+          "fromRow": 1,
+          "fromCol": 5,
+          "toRow": 4,
+          "toCol": 5,
+          "hints": [
+            "黑方胜势"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MH-002",
+      "title": "第二局：破炮先去象后上三路马",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方急于用炮打象，黑方骑河炮妙手阻隔，运子精巧，逐步反夺先手取胜。黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马保中卒",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车保炮",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进四",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "兵三进一",
+          "fromRow": 3,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": [
+            "吃兵",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车八平三",
+          "fromRow": 4,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": [
+            "挺3卒",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "炮二平三",
+          "fromRow": 2,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "马7进8",
+          "fromRow": 7,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 1,
+          "hints": [
+            "左马盘河",
+            "应走马7进8"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "炮三进七",
+          "fromRow": 2,
+          "fromCol": 2,
+          "toRow": 9,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "士6进5",
+          "fromRow": 9,
+          "fromCol": 3,
+          "toRow": 8,
+          "toCol": 4,
+          "hints": [
+            "补士",
+            "应走士6进5"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "马二进三",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "象3进5",
+          "fromRow": 9,
+          "fromCol": 6,
+          "toRow": 7,
+          "toCol": 4,
+          "hints": [
+            "飞象",
+            "应走象3进5"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "炮三退三",
+          "fromRow": 9,
+          "fromCol": 2,
+          "toRow": 6,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "车9平7",
+          "fromRow": 9,
+          "fromCol": 0,
+          "toRow": 9,
+          "toCol": 2,
+          "hints": [
+            "平车捉炮",
+            "应走车9平7"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "车一进一",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 1,
+          "toCol": 0,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "炮2进3",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": [
+            "骑河炮——本局陷阱妙手",
+            "应走炮2进3"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "车一平八",
+          "fromRow": 1,
+          "fromCol": 0,
+          "toRow": 1,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 5,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": [
+            "卒过河",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "车三平七",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "车7进3",
+          "fromRow": 9,
+          "fromCol": 2,
+          "toRow": 6,
+          "toCol": 2,
+          "hints": [
+            "进车压制",
+            "应走车7进3"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "车八进三",
+          "fromRow": 1,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "车2进5",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": [
+            "车吃红车",
+            "应走车2进5"
+          ]
+        },
+        {
+          "step": 29,
+          "side": "Red",
+          "notation": "车七平八",
+          "fromRow": 4,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 30,
+          "side": "Black",
+          "notation": "车7进4",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 2,
+          "toCol": 2,
+          "hints": [
+            "进车吃马",
+            "应走车7进4"
+          ]
+        },
+        {
+          "step": 31,
+          "side": "Red",
+          "notation": "马七退五",
+          "fromRow": 2,
+          "fromCol": 6,
+          "toRow": 1,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 32,
+          "side": "Black",
+          "notation": "车7平6",
+          "fromRow": 2,
+          "fromCol": 2,
+          "toRow": 2,
+          "toCol": 3,
+          "hints": [
+            "平车攻杀",
+            "应走车7平6"
+          ]
+        },
+        {
+          "step": 33,
+          "side": "Red",
+          "notation": "车八平三",
+          "fromRow": 4,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 34,
+          "side": "Black",
+          "notation": "马8进9",
+          "fromRow": 5,
+          "fromCol": 1,
+          "toRow": 3,
+          "toCol": 0,
+          "hints": [
+            "进边马",
+            "应走马8进9"
+          ]
+        },
+        {
+          "step": 35,
+          "side": "Red",
+          "notation": "车三退一",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 3,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 36,
+          "side": "Black",
+          "notation": "将5平6",
+          "fromRow": 9,
+          "fromCol": 4,
+          "toRow": 9,
+          "toCol": 3,
+          "hints": [
+            "出将助攻",
+            "应走将5平6"
+          ]
+        },
+        {
+          "step": 37,
+          "side": "Red",
+          "notation": "马五进七",
+          "fromRow": 1,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 38,
+          "side": "Black",
+          "notation": "车6进2",
+          "fromRow": 2,
+          "fromCol": 3,
+          "toRow": 0,
+          "toCol": 3,
+          "hints": [
+            "沉底车叫将",
+            "应走车6进2"
+          ]
+        },
+        {
+          "step": 39,
+          "side": "Red",
+          "notation": "帅五进一",
+          "fromRow": 0,
+          "fromCol": 4,
+          "toRow": 1,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 40,
+          "side": "Black",
+          "notation": "马9退8",
+          "fromRow": 3,
+          "fromCol": 0,
+          "toRow": 5,
+          "toCol": 1,
+          "hints": [
+            "回马保持攻势",
+            "黑方胜"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MH-003",
+      "title": "第三局：破炮打象后换士上右马",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方先打象再打士，黑方将外出从容调整，上右马强攻取胜。黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马保中卒",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进四",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "兵三进一",
+          "fromRow": 3,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": [
+            "吃兵",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车八平三",
+          "fromRow": 4,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": [
+            "挺3卒",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "炮二平三",
+          "fromRow": 7,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "马7进8",
+          "fromRow": 7,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 7,
+          "hints": [
+            "左马盘河",
+            "应走马7进8"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "炮三进七",
+          "fromRow": 7,
+          "fromCol": 2,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "士6进5",
+          "fromRow": 7,
+          "fromCol": 3,
+          "toRow": 6,
+          "toCol": 3,
+          "hints": [
+            "补士",
+            "应走士6进5"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "炮三平六",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 0,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "将5平4",
+          "fromRow": 9,
+          "fromCol": 4,
+          "toRow": 9,
+          "toCol": 5,
+          "hints": [
+            "将吃炮",
+            "应将5平4"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "马二进三",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "象3进5",
+          "fromRow": 9,
+          "fromCol": 3,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": [
+            "飞象",
+            "应走象3进5"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "马三进四",
+          "fromRow": 2,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "将4平5",
+          "fromRow": 9,
+          "fromCol": 5,
+          "toRow": 9,
+          "toCol": 4,
+          "hints": [
+            "将回中",
+            "应将4平5"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "马四进五",
+          "fromRow": 4,
+          "fromCol": 3,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "马3进5",
+          "fromRow": 7,
+          "fromCol": 6,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": [
+            "兑马",
+            "应走马3进5"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "炮五进四",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "车2平4",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 1,
+          "toCol": 7,
+          "hints": [
+            "平车占肋",
+            "应走车2平4"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "车三进一",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "炮2进2",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": [
+            "骑河炮",
+            "应走炮2进2"
+          ]
+        },
+        {
+          "step": 29,
+          "side": "Red",
+          "notation": "车三进三",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 8,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 30,
+          "side": "Black",
+          "notation": "马8退6",
+          "fromRow": 5,
+          "fromCol": 7,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": [
+            "回马金枪",
+            "应走马8退6"
+          ]
+        },
+        {
+          "step": 31,
+          "side": "Red",
+          "notation": "车三平四",
+          "fromRow": 8,
+          "fromCol": 2,
+          "toRow": 8,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 32,
+          "side": "Black",
+          "notation": "车9平6",
+          "fromRow": 9,
+          "fromCol": 0,
+          "toRow": 8,
+          "toCol": 3,
+          "hints": [
+            "邀兑",
+            "应走车9平6"
+          ]
+        },
+        {
+          "step": 33,
+          "side": "Red",
+          "notation": "车四平一",
+          "fromRow": 8,
+          "fromCol": 3,
+          "toRow": 8,
+          "toCol": 0,
+          "hints": null
+        },
+        {
+          "step": 34,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 5,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": [
+            "过卒",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 35,
+          "side": "Red",
+          "notation": "前车退二",
+          "fromRow": 8,
+          "fromCol": 0,
+          "toRow": 6,
+          "toCol": 0,
+          "hints": null
+        },
+        {
+          "step": 36,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 4,
+          "fromCol": 6,
+          "toRow": 3,
+          "toCol": 6,
+          "hints": [
+            "卒再进",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 37,
+          "side": "Red",
+          "notation": "马七退九",
+          "fromRow": 2,
+          "fromCol": 6,
+          "toRow": 0,
+          "toCol": 8,
+          "hints": null
+        },
+        {
+          "step": 38,
+          "side": "Black",
+          "notation": "炮2进5",
+          "fromRow": 5,
+          "fromCol": 5,
+          "toRow": 0,
+          "toCol": 5,
+          "hints": [
+            "沉底炮",
+            "应走炮2进5"
+          ]
+        },
+        {
+          "step": 39,
+          "side": "Red",
+          "notation": "仕四进五",
+          "fromRow": 2,
+          "fromCol": 3,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 40,
+          "side": "Black",
+          "notation": "炮8进6",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 1,
+          "toCol": 7,
+          "hints": [
+            "进炮",
+            "应走炮8进6"
+          ]
+        },
+        {
+          "step": 41,
+          "side": "Red",
+          "notation": "相三进五",
+          "fromRow": 7,
+          "fromCol": 5,
+          "toRow": 6,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 42,
+          "side": "Black",
+          "notation": "车4进3",
+          "fromRow": 1,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": [
+            "高车",
+            "应走车4进3"
+          ]
+        },
+        {
+          "step": 43,
+          "side": "Red",
+          "notation": "炮五退一",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 44,
+          "side": "Black",
+          "notation": "炮8平1",
+          "fromRow": 1,
+          "fromCol": 7,
+          "toRow": 1,
+          "toCol": 8,
+          "hints": [
+            "黑胜",
+            "黑方胜"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MH-004",
+      "title": "第四局：退炮破巡河车挺兵兑卒",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方巡河车挺兵兑卒，黑方退炮灵活调动，以柔克刚。黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马保中卒",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进四",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "兵三进一",
+          "fromRow": 3,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": [
+            "吃兵",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车八平三",
+          "fromRow": 4,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": [
+            "挺3卒",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "兵七进一",
+          "fromRow": 3,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "炮8退1",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 8,
+          "toCol": 7,
+          "hints": [
+            "退炮——本局精髓",
+            "应走炮8退1"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "马二进一",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "炮8平7",
+          "fromRow": 8,
+          "fromCol": 7,
+          "toRow": 8,
+          "toCol": 6,
+          "hints": [
+            "平炮打车",
+            "应走炮8平7"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "车三平六",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 5,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": [
+            "吃兵",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "车六平七",
+          "fromRow": 4,
+          "fromCol": 5,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "马3进4",
+          "fromRow": 7,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": [
+            "进马",
+            "应走马3进4"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "车七平六",
+          "fromRow": 4,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "炮2平3",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "平炮",
+            "应走炮2平3"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "相七进九",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 6,
+          "toCol": 8,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "车2进4",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 5,
+          "toCol": 7,
+          "hints": [
+            "巡河车",
+            "应走车2进4"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "炮二平四",
+          "fromRow": 7,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "象3进5",
+          "fromRow": 9,
+          "fromCol": 3,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": [
+            "飞象",
+            "应走象3进5"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "车一平二",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 0,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "炮7平4",
+          "fromRow": 8,
+          "fromCol": 6,
+          "toRow": 8,
+          "toCol": 5,
+          "hints": [
+            "平炮打车",
+            "应走炮7平4"
+          ]
+        },
+        {
+          "step": 29,
+          "side": "Red",
+          "notation": "车六平三",
+          "fromRow": 4,
+          "fromCol": 5,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 30,
+          "side": "Black",
+          "notation": "炮4平3",
+          "fromRow": 8,
+          "fromCol": 5,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "再平炮",
+            "应走炮4平3"
+          ]
+        },
+        {
+          "step": 31,
+          "side": "Red",
+          "notation": "马七进六",
+          "fromRow": 2,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 32,
+          "side": "Black",
+          "notation": "车2进4",
+          "fromRow": 5,
+          "fromCol": 7,
+          "toRow": 1,
+          "toCol": 7,
+          "hints": [
+            "进车",
+            "应走车2进4"
+          ]
+        },
+        {
+          "step": 33,
+          "side": "Red",
+          "notation": "炮五平七",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 34,
+          "side": "Black",
+          "notation": "马4进2",
+          "fromRow": 5,
+          "fromCol": 5,
+          "toRow": 3,
+          "toCol": 7,
+          "hints": [
+            "进马",
+            "应走马4进2"
+          ]
+        },
+        {
+          "step": 35,
+          "side": "Red",
+          "notation": "相三进五",
+          "fromRow": 7,
+          "fromCol": 5,
+          "toRow": 6,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 36,
+          "side": "Black",
+          "notation": "后炮进6",
+          "fromRow": 7,
+          "fromCol": 6,
+          "toRow": 0,
+          "toCol": 6,
+          "hints": [
+            "打相",
+            "应走后炮进6"
+          ]
+        },
+        {
+          "step": 37,
+          "side": "Red",
+          "notation": "炮四平七",
+          "fromRow": 7,
+          "fromCol": 3,
+          "toRow": 0,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 38,
+          "side": "Black",
+          "notation": "马2进1",
+          "fromRow": 3,
+          "fromCol": 7,
+          "toRow": 0,
+          "toCol": 8,
+          "hints": [
+            "马奔卧槽",
+            "应走马2进1"
+          ]
+        },
+        {
+          "step": 39,
+          "side": "Red",
+          "notation": "仕四进五",
+          "fromRow": 2,
+          "fromCol": 3,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 40,
+          "side": "Black",
+          "notation": "车9进1",
+          "fromRow": 9,
+          "fromCol": 0,
+          "toRow": 8,
+          "toCol": 0,
+          "hints": [
+            "出车",
+            "应走车9进1"
+          ]
+        },
+        {
+          "step": 41,
+          "side": "Red",
+          "notation": "车三平四",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 42,
+          "side": "Black",
+          "notation": "马1进3",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 1,
+          "toCol": 8,
+          "hints": [
+            "进马叫将",
+            "应走马1进3"
+          ]
+        },
+        {
+          "step": 43,
+          "side": "Red",
+          "notation": "帅五平四",
+          "fromRow": 8,
+          "fromCol": 4,
+          "toRow": 8,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 44,
+          "side": "Black",
+          "notation": "炮3退1",
+          "fromRow": 0,
+          "fromCol": 6,
+          "toRow": 1,
+          "toCol": 6,
+          "hints": [
+            "退炮",
+            "应走炮3退1"
+          ]
+        },
+        {
+          "step": 45,
+          "side": "Red",
+          "notation": "车二进七",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 6,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 46,
+          "side": "Black",
+          "notation": "炮3平6",
+          "fromRow": 1,
+          "fromCol": 6,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": [
+            "平炮叫将",
+            "应走炮3平6"
+          ]
+        },
+        {
+          "step": 47,
+          "side": "Red",
+          "notation": "仕五进四",
+          "fromRow": 1,
+          "fromCol": 3,
+          "toRow": 0,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 48,
+          "side": "Black",
+          "notation": "车2进1",
+          "fromRow": 1,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 7,
+          "hints": [
+            "捉相",
+            "应走车2进1"
+          ]
+        },
+        {
+          "step": 49,
+          "side": "Red",
+          "notation": "相五退七",
+          "fromRow": 6,
+          "fromCol": 5,
+          "toRow": 6,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 50,
+          "side": "Black",
+          "notation": "车2退4",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": [
+            "退车",
+            "应走车2退4"
+          ]
+        },
+        {
+          "step": 51,
+          "side": "Red",
+          "notation": "车二平三",
+          "fromRow": 6,
+          "fromCol": 1,
+          "toRow": 6,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 52,
+          "side": "Black",
+          "notation": "车2平4",
+          "fromRow": 6,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 5,
+          "hints": [
+            "平车叫杀",
+            "应走车2平4"
+          ]
+        },
+        {
+          "step": 53,
+          "side": "Red",
+          "notation": "车三平五",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 6,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 54,
+          "side": "Black",
+          "notation": "士4进5",
+          "fromRow": 7,
+          "fromCol": 3,
+          "toRow": 6,
+          "toCol": 3,
+          "hints": [
+            "补士",
+            "应走士4进5"
+          ]
+        },
+        {
+          "step": 55,
+          "side": "Red",
+          "notation": "车四进二",
+          "fromRow": 4,
+          "fromCol": 3,
+          "toRow": 6,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 56,
+          "side": "Black",
+          "notation": "车4进4",
+          "fromRow": 6,
+          "fromCol": 5,
+          "toRow": 2,
+          "toCol": 5,
+          "hints": [
+            "沉底车",
+            "应走车4进4"
+          ]
+        },
+        {
+          "step": 57,
+          "side": "Red",
+          "notation": "帅四进一",
+          "fromRow": 8,
+          "fromCol": 3,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 58,
+          "side": "Black",
+          "notation": "车9平8",
+          "fromRow": 8,
+          "fromCol": 0,
+          "toRow": 7,
+          "toCol": 0,
+          "hints": [
+            "出车",
+            "应走车9平8"
+          ]
+        },
+        {
+          "step": 59,
+          "side": "Red",
+          "notation": "马一进三",
+          "fromRow": 2,
+          "fromCol": 1,
+          "toRow": 3,
+          "toCol": 0,
+          "hints": null
+        },
+        {
+          "step": 60,
+          "side": "Black",
+          "notation": "车4退1",
+          "fromRow": 2,
+          "fromCol": 5,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": [
+            "黑胜",
+            "黑方胜"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MH-005",
+      "title": "第五局：退炮横车破巡河车边马",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方巡河车配合边马，黑方退炮横车巧妙反击取胜。黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马保中卒",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进四",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "兵三进一",
+          "fromRow": 3,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": [
+            "吃兵",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车八平三",
+          "fromRow": 4,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": [
+            "挺3卒",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "马二进一",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "炮8退1",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 8,
+          "toCol": 7,
+          "hints": [
+            "退炮——本局精髓",
+            "应走炮8退1"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "炮二平四",
+          "fromRow": 7,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "炮8平3",
+          "fromRow": 8,
+          "fromCol": 7,
+          "toRow": 8,
+          "toCol": 4,
+          "hints": [
+            "平炮",
+            "应走炮8平3"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "车一平二",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 0,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "车9进1",
+          "fromRow": 9,
+          "fromCol": 0,
+          "toRow": 8,
+          "toCol": 0,
+          "hints": [
+            "横车",
+            "应走车9进1"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "车三平八",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "马3进4",
+          "fromRow": 7,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": [
+            "进马",
+            "应走马3进4"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "车八平六",
+          "fromRow": 4,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "车9平4",
+          "fromRow": 8,
+          "fromCol": 0,
+          "toRow": 8,
+          "toCol": 5,
+          "hints": [
+            "平车保马",
+            "应走车9平4"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "车二进六",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 6,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "炮3进2",
+          "fromRow": 8,
+          "fromCol": 4,
+          "toRow": 6,
+          "toCol": 4,
+          "hints": [
+            "进炮",
+            "应走炮3进2"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "车二退五",
+          "fromRow": 6,
+          "fromCol": 1,
+          "toRow": 1,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "炮3进3",
+          "fromRow": 6,
+          "fromCol": 4,
+          "toRow": 3,
+          "toCol": 4,
+          "hints": [
+            "再进炮",
+            "应走炮3进3"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "相七进九",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 6,
+          "toCol": 8,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "马7进6",
+          "fromRow": 7,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 3,
+          "hints": [
+            "左马盘河",
+            "应走马7进6"
+          ]
+        },
+        {
+          "step": 29,
+          "side": "Red",
+          "notation": "车六平三",
+          "fromRow": 4,
+          "fromCol": 5,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 30,
+          "side": "Black",
+          "notation": "马4进5",
+          "fromRow": 5,
+          "fromCol": 5,
+          "toRow": 3,
+          "toCol": 4,
+          "hints": [
+            "马踩中兵",
+            "应走马4进5"
+          ]
+        },
+        {
+          "step": 31,
+          "side": "Red",
+          "notation": "车三进五",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 9,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 32,
+          "side": "Black",
+          "notation": "马6进4",
+          "fromRow": 5,
+          "fromCol": 3,
+          "toRow": 3,
+          "toCol": 2,
+          "hints": [
+            "进马",
+            "应走马6进4"
+          ]
+        },
+        {
+          "step": 33,
+          "side": "Red",
+          "notation": "马七进五",
+          "fromRow": 2,
+          "fromCol": 6,
+          "toRow": 3,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 34,
+          "side": "Black",
+          "notation": "炮2进7",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": [
+            "沉底炮",
+            "应走炮2进7"
+          ]
+        },
+        {
+          "step": 35,
+          "side": "Red",
+          "notation": "相九退七",
+          "fromRow": 6,
+          "fromCol": 8,
+          "toRow": 6,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 36,
+          "side": "Black",
+          "notation": "马4进5",
+          "fromRow": 3,
+          "fromCol": 2,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": [
+            "马踩仕",
+            "应走马4进5"
+          ]
+        },
+        {
+          "step": 37,
+          "side": "Red",
+          "notation": "车三平四",
+          "fromRow": 9,
+          "fromCol": 2,
+          "toRow": 9,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 38,
+          "side": "Black",
+          "notation": "将5平6",
+          "fromRow": 9,
+          "fromCol": 4,
+          "toRow": 9,
+          "toCol": 3,
+          "hints": [
+            "出将",
+            "应将5平6"
+          ]
+        },
+        {
+          "step": 39,
+          "side": "Red",
+          "notation": "车二进八",
+          "fromRow": 1,
+          "fromCol": 1,
+          "toRow": 8,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 40,
+          "side": "Black",
+          "notation": "将6进1",
+          "fromRow": 9,
+          "fromCol": 3,
+          "toRow": 8,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 41,
+          "side": "Red",
+          "notation": "车二退一",
+          "fromRow": 8,
+          "fromCol": 1,
+          "toRow": 8,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 42,
+          "side": "Black",
+          "notation": "将6退1",
+          "fromRow": 8,
+          "fromCol": 3,
+          "toRow": 9,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 43,
+          "side": "Red",
+          "notation": "车二平六",
+          "fromRow": 8,
+          "fromCol": 2,
+          "toRow": 8,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 44,
+          "side": "Black",
+          "notation": "马5进3",
+          "fromRow": 1,
+          "fromCol": 3,
+          "toRow": 0,
+          "toCol": 2,
+          "hints": [
+            "进马叫将",
+            "应走马5进3"
+          ]
+        },
+        {
+          "step": 45,
+          "side": "Red",
+          "notation": "马五退六",
+          "fromRow": 3,
+          "fromCol": 4,
+          "toRow": 1,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 46,
+          "side": "Black",
+          "notation": "炮3进3",
+          "fromRow": 3,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": [
+            "黑胜",
+            "黑方胜"
+          ]
+        },
+        {
+          "step": 47,
+          "side": "Red",
+          "notation": "帅五进一",
+          "fromRow": 8,
+          "fromCol": 4,
+          "toRow": 7,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 48,
+          "side": "Black",
+          "notation": "车2进7",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 49,
+          "side": "Red",
+          "notation": "相三进五",
+          "fromRow": 7,
+          "fromCol": 5,
+          "toRow": 6,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 50,
+          "side": "Black",
+          "notation": "炮2退1",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 0,
+          "toCol": 8,
+          "hints": null
+        },
+        {
+          "step": 51,
+          "side": "Red",
+          "notation": "炮四平八",
+          "fromRow": 7,
+          "fromCol": 3,
+          "toRow": 0,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 52,
+          "side": "Black",
+          "notation": "马3退4",
+          "fromRow": 0,
+          "fromCol": 2,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": null
+        }
+      ]
+    },
+    {
+      "id": "MH-006",
+      "title": "第六局：退右炮破过河车贪吃卒",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方过河车急于吃卒，黑方退右炮诱敌深入，运子围攻取胜。黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进六",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "车八平七",
+          "fromRow": 6,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "炮2退1",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 8,
+          "toCol": 7,
+          "hints": [
+            "退右炮——本局精髓",
+            "应走炮2退1"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车七平八",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "马7进6",
+          "fromRow": 7,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 3,
+          "hints": [
+            "左马盘河",
+            "应走马7进6"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "兵七进一",
+          "fromRow": 3,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": [
+            "渡卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "马二进一",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 4,
+          "fromCol": 2,
+          "toRow": 3,
+          "toCol": 2,
+          "hints": [
+            "卒再进",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "炮二平四",
+          "fromRow": 7,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "象7进5",
+          "fromRow": 9,
+          "fromCol": 2,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": [
+            "飞象",
+            "应走象7进5"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "车一平二",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 0,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "炮8进1",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": [
+            "高炮",
+            "应走炮8进1"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "车八进一",
+          "fromRow": 6,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "炮2平8",
+          "fromRow": 8,
+          "fromCol": 7,
+          "toRow": 8,
+          "toCol": 1,
+          "hints": [
+            "平炮打车",
+            "应走炮2平8"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "车八进二",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "后炮进8",
+          "fromRow": 8,
+          "fromCol": 1,
+          "toRow": 0,
+          "toCol": 1,
+          "hints": [
+            "打底相",
+            "应走后炮进8"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "车八退二",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "前炮平9",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 0,
+          "toCol": 0,
+          "hints": [
+            "平炮叫杀",
+            "应走前炮平9"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "车八平七",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 3,
+          "fromCol": 2,
+          "toRow": 2,
+          "toCol": 2,
+          "hints": [
+            "卒冲",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 29,
+          "side": "Red",
+          "notation": "炮五平三",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 30,
+          "side": "Black",
+          "notation": "车9平7",
+          "fromRow": 9,
+          "fromCol": 0,
+          "toRow": 7,
+          "toCol": 0,
+          "hints": [
+            "平车",
+            "应走车9平7"
+          ]
+        },
+        {
+          "step": 31,
+          "side": "Red",
+          "notation": "炮三退一",
+          "fromRow": 2,
+          "fromCol": 2,
+          "toRow": 2,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 32,
+          "side": "Black",
+          "notation": "炮8进4",
+          "fromRow": 6,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 7,
+          "hints": [
+            "进炮",
+            "应走炮8进4"
+          ]
+        },
+        {
+          "step": 33,
+          "side": "Red",
+          "notation": "马七进八",
+          "fromRow": 2,
+          "fromCol": 6,
+          "toRow": 3,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 34,
+          "side": "Black",
+          "notation": "车7进8",
+          "fromRow": 7,
+          "fromCol": 0,
+          "toRow": 0,
+          "toCol": 0,
+          "hints": [
+            "沉底车",
+            "应走车7进8"
+          ]
+        },
+        {
+          "step": 35,
+          "side": "Red",
+          "notation": "相七进五",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 36,
+          "side": "Black",
+          "notation": "车7平6",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 0,
+          "toCol": 3,
+          "hints": [
+            "平车叫杀",
+            "应走车7平6"
+          ]
+        },
+        {
+          "step": 37,
+          "side": "Red",
+          "notation": "仕六进五",
+          "fromRow": 2,
+          "fromCol": 3,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 38,
+          "side": "Black",
+          "notation": "炮8平5",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": [
+            "平中炮",
+            "黑胜"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MH-007",
+      "title": "第七局：飞象进马破过河车边马",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方过河车配合边马进攻，黑方飞象固防进马反击。黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进六",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "马二进一",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "象7进5",
+          "fromRow": 9,
+          "fromCol": 2,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": [
+            "飞象固防——本局精髓",
+            "应走象7进5"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车八平七",
+          "fromRow": 6,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "马7进6",
+          "fromRow": 7,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 3,
+          "hints": [
+            "进马反击",
+            "应走马7进6"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "兵七进一",
+          "fromRow": 3,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "炮2进4",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 3,
+          "toCol": 7,
+          "hints": [
+            "过河炮",
+            "应走炮2进4"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "炮五进四",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 3,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "士6进5",
+          "fromRow": 7,
+          "fromCol": 3,
+          "toRow": 6,
+          "toCol": 3,
+          "hints": [
+            "补士",
+            "应走士6进5"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "炮五退一",
+          "fromRow": 3,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "炮2平3",
+          "fromRow": 3,
+          "fromCol": 7,
+          "toRow": 3,
+          "toCol": 6,
+          "hints": [
+            "平炮压马",
+            "应走炮2平3"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "车七平四",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 6,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "炮3进3",
+          "fromRow": 3,
+          "fromCol": 6,
+          "toRow": 0,
+          "toCol": 6,
+          "hints": [
+            "打相",
+            "应走炮3进3"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "仕六进五",
+          "fromRow": 2,
+          "fromCol": 3,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "炮3平1",
+          "fromRow": 0,
+          "fromCol": 6,
+          "toRow": 0,
+          "toCol": 8,
+          "hints": [
+            "平炮边路",
+            "应走炮3平1"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "车四退一",
+          "fromRow": 6,
+          "fromCol": 3,
+          "toRow": 5,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "炮8进2",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 5,
+          "toCol": 7,
+          "hints": [
+            "高炮",
+            "应走炮8进2"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "车四平三",
+          "fromRow": 5,
+          "fromCol": 3,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "炮8平5",
+          "fromRow": 5,
+          "fromCol": 7,
+          "toRow": 5,
+          "toCol": 4,
+          "hints": [
+            "平中炮",
+            "应走炮8平5"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "车三退一",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "车2进9",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": [
+            "沉底车绝杀",
+            "黑胜"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MH-008",
+      "title": "第八局：挺马前卒破直横车边马",
+      "category": "卷上·屏风马破当头炮",
+      "description": "红方直横车边马进攻，黑方挺马前卒以静制动，后发制人。黑胜。",
+      "moves": [
+        {
+          "step": 1,
+          "side": "Red",
+          "notation": "炮八平五",
+          "fromRow": 2,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 2,
+          "side": "Black",
+          "notation": "马2进3",
+          "fromRow": 9,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "跳马",
+            "应走马2进3"
+          ]
+        },
+        {
+          "step": 3,
+          "side": "Red",
+          "notation": "马八进七",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": null
+        },
+        {
+          "step": 4,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 5,
+          "toCol": 2,
+          "hints": [
+            "挺7卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 5,
+          "side": "Red",
+          "notation": "车九平八",
+          "fromRow": 0,
+          "fromCol": 8,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 6,
+          "side": "Black",
+          "notation": "车1平2",
+          "fromRow": 9,
+          "fromCol": 8,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": [
+            "出车",
+            "应走车1平2"
+          ]
+        },
+        {
+          "step": 7,
+          "side": "Red",
+          "notation": "车八进六",
+          "fromRow": 0,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 8,
+          "side": "Black",
+          "notation": "马8进7",
+          "fromRow": 9,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": [
+            "跳左马",
+            "应走马8进7"
+          ]
+        },
+        {
+          "step": 9,
+          "side": "Red",
+          "notation": "马二进一",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 2,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 10,
+          "side": "Black",
+          "notation": "象7进5",
+          "fromRow": 9,
+          "fromCol": 2,
+          "toRow": 7,
+          "toCol": 3,
+          "hints": [
+            "飞象",
+            "应走象7进5"
+          ]
+        },
+        {
+          "step": 11,
+          "side": "Red",
+          "notation": "车一进一",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 1,
+          "toCol": 0,
+          "hints": null
+        },
+        {
+          "step": 12,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 6,
+          "hints": [
+            "挺3卒——挺马前卒",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 13,
+          "side": "Red",
+          "notation": "车一平四",
+          "fromRow": 1,
+          "fromCol": 0,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 14,
+          "side": "Black",
+          "notation": "马3进4",
+          "fromRow": 7,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": [
+            "进马",
+            "应走马3进4"
+          ]
+        },
+        {
+          "step": 15,
+          "side": "Red",
+          "notation": "车八平六",
+          "fromRow": 6,
+          "fromCol": 7,
+          "toRow": 6,
+          "toCol": 5,
+          "hints": null
+        },
+        {
+          "step": 16,
+          "side": "Black",
+          "notation": "马4进3",
+          "fromRow": 5,
+          "fromCol": 5,
+          "toRow": 3,
+          "toCol": 6,
+          "hints": [
+            "马踩兵",
+            "应走马4进3"
+          ]
+        },
+        {
+          "step": 17,
+          "side": "Red",
+          "notation": "车四进五",
+          "fromRow": 1,
+          "fromCol": 3,
+          "toRow": 6,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 18,
+          "side": "Black",
+          "notation": "士6进5",
+          "fromRow": 7,
+          "fromCol": 3,
+          "toRow": 6,
+          "toCol": 3,
+          "hints": [
+            "补士",
+            "应走士6进5"
+          ]
+        },
+        {
+          "step": 19,
+          "side": "Red",
+          "notation": "车六平八",
+          "fromRow": 6,
+          "fromCol": 5,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 20,
+          "side": "Black",
+          "notation": "马3退4",
+          "fromRow": 3,
+          "fromCol": 6,
+          "toRow": 5,
+          "toCol": 5,
+          "hints": [
+            "回马",
+            "应走马3退4"
+          ]
+        },
+        {
+          "step": 21,
+          "side": "Red",
+          "notation": "车四平三",
+          "fromRow": 6,
+          "fromCol": 3,
+          "toRow": 6,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 22,
+          "side": "Black",
+          "notation": "卒3进1",
+          "fromRow": 5,
+          "fromCol": 6,
+          "toRow": 4,
+          "toCol": 6,
+          "hints": [
+            "过卒",
+            "应走卒3进1"
+          ]
+        },
+        {
+          "step": 23,
+          "side": "Red",
+          "notation": "车八退一",
+          "fromRow": 6,
+          "fromCol": 7,
+          "toRow": 5,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 24,
+          "side": "Black",
+          "notation": "马4进6",
+          "fromRow": 5,
+          "fromCol": 5,
+          "toRow": 3,
+          "toCol": 6,
+          "hints": [
+            "进马",
+            "应走马4进6"
+          ]
+        },
+        {
+          "step": 25,
+          "side": "Red",
+          "notation": "车三进一",
+          "fromRow": 6,
+          "fromCol": 2,
+          "toRow": 7,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 26,
+          "side": "Black",
+          "notation": "炮2平7",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "平炮打车",
+            "应走炮2平7"
+          ]
+        },
+        {
+          "step": 27,
+          "side": "Red",
+          "notation": "车八进四",
+          "fromRow": 5,
+          "fromCol": 7,
+          "toRow": 9,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 28,
+          "side": "Black",
+          "notation": "卒7进1",
+          "fromRow": 5,
+          "fromCol": 2,
+          "toRow": 4,
+          "toCol": 2,
+          "hints": [
+            "渡卒",
+            "应走卒7进1"
+          ]
+        },
+        {
+          "step": 29,
+          "side": "Red",
+          "notation": "兵三进一",
+          "fromRow": 3,
+          "fromCol": 7,
+          "toRow": 4,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 30,
+          "side": "Black",
+          "notation": "炮7进7",
+          "fromRow": 7,
+          "fromCol": 6,
+          "toRow": 0,
+          "toCol": 6,
+          "hints": [
+            "打底相",
+            "应走炮7进7"
+          ]
+        },
+        {
+          "step": 31,
+          "side": "Red",
+          "notation": "仕四进五",
+          "fromRow": 2,
+          "fromCol": 3,
+          "toRow": 1,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 32,
+          "side": "Black",
+          "notation": "车9平7",
+          "fromRow": 9,
+          "fromCol": 0,
+          "toRow": 7,
+          "toCol": 0,
+          "hints": [
+            "平车捉马",
+            "应走车9平7"
+          ]
+        },
+        {
+          "step": 33,
+          "side": "Red",
+          "notation": "炮五平四",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 34,
+          "side": "Black",
+          "notation": "车7进5",
+          "fromRow": 7,
+          "fromCol": 0,
+          "toRow": 2,
+          "toCol": 0,
+          "hints": [
+            "吃马",
+            "应走车7进5"
+          ]
+        },
+        {
+          "step": 35,
+          "side": "Red",
+          "notation": "相七进五",
+          "fromRow": 6,
+          "fromCol": 6,
+          "toRow": 6,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 36,
+          "side": "Black",
+          "notation": "马6进5",
+          "fromRow": 3,
+          "fromCol": 6,
+          "toRow": 1,
+          "toCol": 7,
+          "hints": [
+            "马踩仕",
+            "应走马6进5"
+          ]
+        },
+        {
+          "step": 37,
+          "side": "Red",
+          "notation": "炮二平五",
+          "fromRow": 7,
+          "fromCol": 1,
+          "toRow": 7,
+          "toCol": 4,
+          "hints": null
+        },
+        {
+          "step": 38,
+          "side": "Black",
+          "notation": "炮7平9",
+          "fromRow": 0,
+          "fromCol": 6,
+          "toRow": 0,
+          "toCol": 8,
+          "hints": [
+            "平炮叫杀",
+            "应走炮7平9"
+          ]
+        },
+        {
+          "step": 39,
+          "side": "Red",
+          "notation": "炮四平二",
+          "fromRow": 2,
+          "fromCol": 3,
+          "toRow": 2,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 40,
+          "side": "Black",
+          "notation": "车7进4",
+          "fromRow": 2,
+          "fromCol": 0,
+          "toRow": 0,
+          "toCol": 0,
+          "hints": [
+            "沉底车",
+            "应走车7进4"
+          ]
+        },
+        {
+          "step": 41,
+          "side": "Red",
+          "notation": "仕五退四",
+          "fromRow": 1,
+          "fromCol": 3,
+          "toRow": 2,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 42,
+          "side": "Black",
+          "notation": "车7退2",
+          "fromRow": 0,
+          "fromCol": 0,
+          "toRow": 2,
+          "toCol": 0,
+          "hints": [
+            "抽将",
+            "应走车7退2"
+          ]
+        },
+        {
+          "step": 43,
+          "side": "Red",
+          "notation": "炮二退二",
+          "fromRow": 2,
+          "fromCol": 1,
+          "toRow": 0,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 44,
+          "side": "Black",
+          "notation": "车7平5",
+          "fromRow": 2,
+          "fromCol": 0,
+          "toRow": 2,
+          "toCol": 4,
+          "hints": [
+            "吃炮",
+            "应走车7平5"
+          ]
+        },
+        {
+          "step": 45,
+          "side": "Red",
+          "notation": "仕六进五",
+          "fromRow": 1,
+          "fromCol": 3,
+          "toRow": 2,
+          "toCol": 3,
+          "hints": null
+        },
+        {
+          "step": 46,
+          "side": "Black",
+          "notation": "车5平9",
+          "fromRow": 2,
+          "fromCol": 4,
+          "toRow": 2,
+          "toCol": 8,
+          "hints": [
+            "平车叫杀",
+            "应走车5平9"
+          ]
+        },
+        {
+          "step": 47,
+          "side": "Red",
+          "notation": "马七退八",
+          "fromRow": 2,
+          "fromCol": 6,
+          "toRow": 0,
+          "toCol": 7,
+          "hints": null
+        },
+        {
+          "step": 48,
+          "side": "Black",
+          "notation": "炮8平7",
+          "fromRow": 7,
+          "fromCol": 7,
+          "toRow": 7,
+          "toCol": 6,
+          "hints": [
+            "平炮",
+            "应走炮8平7"
+          ]
+        },
+        {
+          "step": 49,
+          "side": "Red",
+          "notation": "炮二平三",
+          "fromRow": 0,
+          "fromCol": 1,
+          "toRow": 0,
+          "toCol": 2,
+          "hints": null
+        },
+        {
+          "step": 50,
+          "side": "Black",
+          "notation": "车9平7",
+          "fromRow": 2,
+          "fromCol": 8,
+          "toRow": 2,
+          "toCol": 6,
+          "hints": [
+            "捉炮",
+            "应走车9平7"
+          ]
+        },
+        {
+          "step": 51,
+          "side": "Red",
+          "notation": "炮三平二",
+          "fromRow": 0,
+          "fromCol": 2,
+          "toRow": 0,
+          "toCol": 1,
+          "hints": null
+        },
+        {
+          "step": 52,
+          "side": "Black",
+          "notation": "车7平2",
+          "fromRow": 2,
+          "fromCol": 6,
+          "toRow": 2,
+          "toCol": 7,
+          "hints": [
+            "黑胜",
+            "黑方胜"
+          ]
+        }
+      ]
+    }
+  ]
+}

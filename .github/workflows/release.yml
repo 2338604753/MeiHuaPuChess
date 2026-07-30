@@ -1,0 +1,44 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: 发布（自包含单文件）
+        run: >
+          dotnet publish src/MeiHuaPuChess.App/MeiHuaPuChess.App.csproj
+          -c Release
+          -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -o publish
+
+      - name: 打包为 ZIP
+        run: |
+          $version = "${{ github.ref_name }}" -replace '^v', ''
+          Compress-Archive -Path publish\* -DestinationPath "MeiHuaPuChess-v${version}-win-x64.zip"
+
+      - name: 创建 GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "梅花谱象棋 ${{ github.ref_name }}"
+          files: MeiHuaPuChess-v*.zip
+          generate_release_notes: true
