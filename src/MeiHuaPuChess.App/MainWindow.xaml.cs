@@ -1,5 +1,7 @@
+using System.Media;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using MeiHuaPuChess.App.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using MeiHuaPuChess.Core.Services;
@@ -14,6 +16,9 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+
+        // 快捷键
+        KeyDown += OnWindowKeyDown;
 
         // 设置 DI
         var services = new ServiceCollection();
@@ -58,11 +63,22 @@ public partial class MainWindow : Window
         };
         _viewModel.Engine.OnRedMoveCompleted += (_) =>
         {
-            Dispatcher.Invoke(() => ChessBoard.DrawPieces());
+            Dispatcher.Invoke(() =>
+            {
+                ChessBoard.DrawPieces();
+                SystemSounds.Asterisk.Play();
+            });
         };
         _viewModel.Engine.OnBlackMoveValidated += (result, hints) =>
         {
-            Dispatcher.Invoke(() => ChessBoard.DrawPieces());
+            Dispatcher.Invoke(() =>
+            {
+                ChessBoard.DrawPieces();
+                if (result == Core.Engine.MatchResult.Correct)
+                    SystemSounds.Asterisk.Play();
+                else
+                    SystemSounds.Hand.Play();
+            });
         };
 
         // 加载数据
@@ -95,5 +111,46 @@ public partial class MainWindow : Window
         var service = new Services.UpdateService();
         var result = await service.CheckAsync();
         dlg.ShowResult(result);
+    }
+
+    // ================================================================
+    //  快捷键
+    // ================================================================
+
+    private void OnWindowKeyDown(object sender, KeyEventArgs e)
+    {
+        switch (e.Key)
+        {
+            case Key.Space:
+                _viewModel.ToggleAutoPlayCommand.Execute(null);
+                e.Handled = true;
+                break;
+            case Key.Left:
+                _viewModel.PreviousStepCommand.Execute(null);
+                e.Handled = true;
+                break;
+            case Key.Right:
+                _viewModel.NextStepCommand.Execute(null);
+                e.Handled = true;
+                break;
+            case Key.F:
+                ChessBoard.ToggleFlip();
+                e.Handled = true;
+                break;
+            case Key.T:
+                Topmost = !Topmost;
+                e.Handled = true;
+                break;
+        }
+    }
+
+    private void OnToggleTopmostClick(object sender, RoutedEventArgs e)
+    {
+        Topmost = !Topmost;
+    }
+
+    private void OnFlipBoardClick(object sender, RoutedEventArgs e)
+    {
+        ChessBoard.ToggleFlip();
     }
 }

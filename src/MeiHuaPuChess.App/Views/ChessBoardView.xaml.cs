@@ -71,6 +71,15 @@ public partial class ChessBoardView : UserControl
 
     public Side EditingSide { get; set; } = Side.Red;
 
+    /// <summary>棋盘翻转（红黑互换视角）</summary>
+    public bool IsFlipped { get; set; }
+
+    public void ToggleFlip()
+    {
+        IsFlipped = !IsFlipped;
+        DrawPieces();
+    }
+
     private (int Row, int Col)? _selectedPiece;
     private List<(int Row, int Col)> _legalMoves = new();
 
@@ -511,8 +520,8 @@ public partial class ChessBoardView : UserControl
 
     private void DrawPiece(ChessPiece piece)
     {
-        double x = _offsetX + piece.Col * _cellSize;
-        double y = _offsetY + piece.Row * _cellSize;
+        double x = _offsetX + (IsFlipped ? 8 - piece.Col : piece.Col) * _cellSize;
+        double y = _offsetY + (IsFlipped ? 9 - piece.Row : piece.Row) * _cellSize;
         double pieceSize = _cellSize * PieceRatio;
 
         // 外容器

@@ -387,7 +387,17 @@
                         <Button Grid.Column="1" Content="检查更新" FontSize="11"
                                 Foreground="{DynamicResource TextSecondaryBrush}"
                                 Background="Transparent" BorderThickness="0" Cursor="Hand"
-                                VerticalAlignment="Center" Click="OnCheckUpdateClick"/>
+                                VerticalAlignment="Center" Click="OnCheckUpdateClick"
+                                Margin="0,0,4,0"/>
+                        <Button Content="翻转" FontSize="11" ToolTip="棋盘翻转 (F)"
+                                Foreground="{DynamicResource TextSecondaryBrush}"
+                                Background="Transparent" BorderThickness="0" Cursor="Hand"
+                                VerticalAlignment="Center" Click="OnFlipBoardClick"
+                                Margin="0,0,4,0"/>
+                        <Button Content="置顶" FontSize="11" ToolTip="窗口置顶 (T)"
+                                Foreground="{DynamicResource TextSecondaryBrush}"
+                                Background="Transparent" BorderThickness="0" Cursor="Hand"
+                                VerticalAlignment="Center" Click="OnToggleTopmostClick"/>
                     </Grid>
                 </Border>
 
