@@ -90,8 +90,8 @@ public partial class MainViewModel : ObservableObject
     public void SwitchToMeiHuaPu()
     {
         if (CurrentSource == RecordSource.MeiHuaPu) return;
-        CurrentSource = RecordSource.MeiHuaPu;
         SelectedRecord = MeiHuaPuRecords.FirstOrDefault();
+        CurrentSource = RecordSource.MeiHuaPu;
     }
 
     [RelayCommand]
@@ -106,17 +106,10 @@ public partial class MainViewModel : ObservableObject
             r.IsFavorite = _favoriteIds.Contains(r.Id);
             UserRecords.Add(r);
         }
-        CurrentSource = RecordSource.User;
         SelectedRecord = UserRecords.FirstOrDefault();
+        CurrentSource = RecordSource.User;
     }
-
-    /// <summary>通知 DisplayRecords 变更</summary>
-    partial void OnCurrentSourceChanged(RecordSource value)
-    {
-        OnPropertyChanged(nameof(DisplayRecords));
-        OnPropertyChanged(nameof(IsMeiHuaPu));
-        OnPropertyChanged(nameof(IsUserSource));
-    }
+    // OnCurrentSourceChanged 由 [NotifyPropertyChangedFor] 自动生成，无需手动实现
 
     // ================================================================
     //  收藏
@@ -134,10 +127,7 @@ public partial class MainViewModel : ObservableObject
         _userStore.SaveFavorites(_favoriteIds);
 
         SelectedRecord.IsFavorite = _favoriteIds.Contains(id);
-        // 触发 UI 刷新
-        var rec = SelectedRecord;
-        SelectedRecord = null;
-        SelectedRecord = rec;
+        OnPropertyChanged(nameof(IsCurrentFavorite));
     }
 
     public bool IsCurrentFavorite => SelectedRecord?.IsFavorite ?? false;
